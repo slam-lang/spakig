@@ -13,7 +13,11 @@ enum
     HELP_PACKAGE
 end
 
-oper proc help 1 0
+var tempcommand 64
+var tempclone 64
+var temppath 64
+
+proc help 1 0
   copy HELP_VERSION == if [
     "slam compiler v" (cstr.print) (version) (cstr.println)
     disc 0 quit
@@ -29,7 +33,7 @@ oper proc help 1 0
   "spakig the Slam package manager v" (cstr.print) (version) (cstr.print) " usage:" (cstr.println)
   (cstr.cr)
   "    spakig install [packagename]" (cstr.println)
-  "    spakig remove [packagename]" (cstr.println)
+  "    spakig remove  [packagename]" (cstr.println)
   (cstr.cr)
   
   1 quit
@@ -37,27 +41,103 @@ oper proc help 1 0
   ret
 end
 
+proc clonerepo 0 0
+  tempcommand (os.execcmdecho)
+
+  tempclone (cstr.clear) "git@github.com:" (cstr.copy) disc
+  2 (os.args) (cstr.cat)
+  disc
+
+  temppath (cstr.clear) "/home/john/.local/slam/cache/" (cstr.copy) disc
+  2 (os.args) (cstr.cat)
+  disc
+
+  tempcommand
+  "/usr/bin/git" put int.SIZE +
+  "clone" put int.SIZE +
+  tempclone put int.SIZE +
+  temppath put int.SIZE +
+  NULL put disc
+
+  tempcommand (os.execcmdecho)
+
+  ret
+end
+
+proc pullrepo 0 0
+  tempcommand (os.execcmdecho)
+
+  temppath (cstr.clear) "/home/john/.local/slam/cache/" (cstr.copy) disc
+  2 (os.args) (cstr.cat)
+  disc
+
+  tempcommand
+  "/usr/bin/git" put int.SIZE +
+  "-C" put int.SIZE +
+  temppath put int.SIZE +
+  "pull" put int.SIZE +
+  "-q" put int.SIZE +
+  NULL put disc
+
+  tempcommand (os.execcmdecho)
+
+  ret
+end
+
 proc install 0 0
-  2 argc == if [HELP_PACKAGE help]
+  2 argc == if [HELP_PACKAGE (help)]
+  
+  tempcommand
+  "/usr/bin/mkdir" put int.SIZE +
+  "-p" put int.SIZE +
+  {TODO: get $HOME}
+  "/home/john/.local/slam/cache" put int.SIZE +
+  NULL put disc
+
+  temppath (cstr.clear) "/home/john/.local/slam/cache/" (cstr.copy) disc
+  2 (os.args) (cstr.cat)
+  (os.fexists) copy
+  if [
+    (pullrepo)
+  ]
+  ! if [
+    (clonerepo)
+  ]
+  
+  temppath (cstr.clear) "/home/john/.local/slam/cache/" (cstr.copy) disc
+  2 (os.args) (cstr.cat)
+  "/package.spk" (cstr.cat)
+
+  (os.fexists) ! if [
+    "ERROR: No package file in repo" (cstr.println)
+    temppath (cstr.println)
+
+    255 quit
+  ]
+
+  3 0 (log.level)
+  "SPK" "Installing " (log.msg)
+  temppath (log.cat)
+  (log.log)
 
   0 quit
 end
 
 proc remove 0 0
-  2 argc == if [HELP_PACKAGE help]
+  2 argc == if [HELP_PACKAGE (help)]
 
   0 quit
 end
 
 proc main 0 0
-  1 argc == if [HELP_ARGS help]
+  1 argc == if [HELP_ARGS (help)]
 
   1 (os.args)
   copy "install" (cstr.eq) if (install)
   copy "remove" (cstr.eq) if (remove)
   disc
 
-  HELP_OPER help
+  HELP_OPER (help)
 
   ret
 end

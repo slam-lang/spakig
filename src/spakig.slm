@@ -1,0 +1,63 @@
+inc stdlib.slm
+inc log.slm
+inc os.slm
+
+proc version 0 1
+  "0.0.0" ret
+end
+
+enum
+0   HELP_VERSION
+    HELP_ARGS
+    HELP_OPER
+    HELP_PACKAGE
+end
+
+oper proc help 1 0
+  copy HELP_VERSION == if [
+    "slam compiler v" (cstr.print) (version) (cstr.println)
+    disc 0 quit
+  ] copy HELP_ARGS == if [
+    "ERROR: You must specify an operation" (cstr.println)
+  ] copy HELP_OPER == if [
+    "ERROR: Invalid operation `" (cstr.print)
+    1 (os.args) (cstr.print)
+    "`" (cstr.println)
+  ] copy HELP_PACKAGE == if [
+    "ERROR: You must specify a package name" (cstr.println)
+  ] disc
+  "spakig the Slam package manager v" (cstr.print) (version) (cstr.print) " usage:" (cstr.println)
+  (cstr.cr)
+  "    spakig install [packagename]" (cstr.println)
+  "    spakig remove [packagename]" (cstr.println)
+  (cstr.cr)
+  
+  1 quit
+
+  ret
+end
+
+proc install 0 0
+  2 argc == if [HELP_PACKAGE help]
+
+  0 quit
+end
+
+proc remove 0 0
+  2 argc == if [HELP_PACKAGE help]
+
+  0 quit
+end
+
+proc main 0 0
+  1 argc == if [HELP_ARGS help]
+
+  1 (os.args)
+  copy "install" (cstr.eq) if (install)
+  copy "remove" (cstr.eq) if (remove)
+  disc
+
+  HELP_OPER help
+
+  ret
+end

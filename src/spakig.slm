@@ -13,9 +13,19 @@ enum
     HELP_PACKAGE
 end
 
+const READSIZE 1024
+
 var tempcommand 64
 var tempclone 64
 var temppath 64
+var cachepath 128
+
+var srcpath 128
+
+var inputfd int.SIZE
+var readbuffer int.SIZE
+var cmdbuffer READSIZE
+var _ 1
 
 proc help 1 0
   copy HELP_VERSION == if [
@@ -41,6 +51,19 @@ proc help 1 0
   ret
 end
 
+proc openinput 1 0
+  0 swap
+  fm.READ swap
+  0
+  covr readc '/' != if [
+    disc -100
+  ]
+  (os.open)
+  inputfd swap put disc
+
+  ret
+end
+
 proc clonerepo 0 0
   tempcommand (os.execcmdecho)
 
@@ -48,7 +71,7 @@ proc clonerepo 0 0
   2 (os.args) (cstr.cat)
   disc
 
-  temppath (cstr.clear) "/home/john/.local/slam/cache/" (cstr.copy) disc
+  temppath (cstr.clear) cachepath (cstr.copy) disc
   2 (os.args) (cstr.cat)
   disc
 
@@ -67,7 +90,7 @@ end
 proc pullrepo 0 0
   tempcommand (os.execcmdecho)
 
-  temppath (cstr.clear) "/home/john/.local/slam/cache/" (cstr.copy) disc
+  temppath (cstr.clear) cachepath (cstr.copy) disc
   2 (os.args) (cstr.cat)
   disc
 
@@ -84,17 +107,114 @@ proc pullrepo 0 0
   ret
 end
 
+proc setsrc 0 0
+  "lol" (cstr.println)
+
+  ret
+end
+
+proc parsecmd 0 0
+  cmdbuffer readc '"' == cmdbuffer (cstr.last) '"' == && if [
+    cmdbuffer (cstr.println)
+
+    cmdbuffer (cstr.clear) disc
+
+    ret
+  ]
+  cmdbuffer
+  copy "src" (cstr.eq) if (setsrc) 
+  disc
+  
+  ret
+end
+
+proc checkcmd 0 1
+  cmdbuffer readc '"' == cmdbuffer (cstr.last) '"' != &&
+  cmdbuffer """ (cstr.eq) ||
+  !
+
+  ret
+end
+
+proc checkbuffer 2 2
+  { if the command is complete, get the buffer }
+  (checkcmd) if [(parsecmd) disc disc cmdbuffer 0 ret]
+
+  { if the command is not complete, append a space }
+  disc 32
+  ret
+end
+
+
+proc parsefile 0 0
+  inputfd read 0 == if ret
+  READSIZE READSIZE (heap.zalloc)
+  readbuffer swap put read
+  inputfd read (os.read) disc
+  inputfd read 74 sys1 disc
+  do
+    readbuffer read
+    copy
+    cmdbuffer
+    do
+      covr readc
+      
+      copy 9 {tab} ==
+      covr 10 {lf} == ||
+      covr 13 {cr} == ||
+      covr 32 {spc} == ||
+      if (checkbuffer)
+
+      
+      covr
+      swap
+      putc disc
+
+      swap
+      1 +
+      swap
+      copy readc 0 != if [
+        1 +
+      ]
+
+      covr readc 0 !=
+    end
+    disc
+    disc
+    
+    readbuffer swap put disc
+
+    readbuffer read (cstr.clear)
+
+    cmdbuffer (cstr.copy) disc disc
+
+    READSIZE cmdbuffer (cstr.len) -
+    readbuffer read cmdbuffer (cstr.len) +
+    inputfd read (os.read) copy
+    readbuffer read + cmdbuffer (cstr.len) + 1 + copy readc 0 != if (cstr.clear) disc
+
+    cmdbuffer READSIZE (mem.zero)
+  end
+  
+  readbuffer read
+  (heap.free)
+  
+  ret
+end
+
 proc install 0 0
   2 argc == if [HELP_PACKAGE (help)]
   
+  cachepath "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/cache/" (cstr.cat) disc
+
   tempcommand
   "/usr/bin/mkdir" put int.SIZE +
   "-p" put int.SIZE +
-  {TODO: get $HOME}
-  "/home/john/.local/slam/cache" put int.SIZE +
+  cachepath put int.SIZE +
   NULL put disc
 
-  temppath (cstr.clear) "/home/john/.local/slam/cache/" (cstr.copy) disc
+  temppath (cstr.clear) cachepath (cstr.copy) disc
   2 (os.args) (cstr.cat)
   (os.fexists) copy
   if [
@@ -103,8 +223,8 @@ proc install 0 0
   ! if [
     (clonerepo)
   ]
-  
-  temppath (cstr.clear) "/home/john/.local/slam/cache/" (cstr.copy) disc
+
+  temppath (cstr.clear) cachepath (cstr.copy) disc
   2 (os.args) (cstr.cat)
   "/package.spk" (cstr.cat)
 
@@ -115,10 +235,18 @@ proc install 0 0
     255 quit
   ]
 
+  temppath (openinput)
+
   3 0 (log.level)
   "SPK" "Installing " (log.msg)
   temppath (log.cat)
   (log.log)
+
+  temppath (cstr.clear) cachepath (cstr.copy)
+  2 (os.args) (cstr.cat)
+  disc
+
+  (parsefile)
 
   0 quit
 end

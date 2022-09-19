@@ -157,7 +157,27 @@ proc setsrc 0 0
 end
 
 proc addbin 0 0
-  srcpath (cstr.println)
+  (popstack)
+
+  temppath (cstr.clear) srcpath (cstr.copy) disc
+  covr (cstr.cat)
+  ".slm" (cstr.cat)
+  disc
+
+  libpath (cstr.clear) binpath (cstr.copy) disc
+  swap (cstr.cat)
+  disc
+  
+  tempcommand
+  "/usr/bin/slam" put int.SIZE +
+  "-o" put int.SIZE +
+  libpath put int.SIZE +
+  temppath put int.SIZE +
+  NULL put disc
+
+
+  tempcommand (os.execcmdecho)
+  
   ret
 end
 
@@ -175,8 +195,7 @@ proc addlibd 0 0
   "-r" put int.SIZE +
   libpath put int.SIZE +
   temppath put int.SIZE +
-  NULL put int.SIZE +
-  disc
+  NULL put disc
 
   tempcommand (os.execcmdecho)
 

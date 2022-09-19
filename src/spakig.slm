@@ -232,13 +232,18 @@ proc parsecmd 0 0
     ret
   ]
   cmdbuffer
-  copy "src"  (cstr.eq) if (setsrc) 
-  copy "bin"  (cstr.eq) if (addbin)
-  copy "lib"  (cstr.eq) if (addlib) 
-  copy "libd" (cstr.eq) if (addlibd) 
+  copy "src"  (cstr.eq) if [ (setsrc)  disc ret]
+  copy "bin"  (cstr.eq) if [ (addbin)  disc ret]
+  copy "lib"  (cstr.eq) if [ (addlib)  disc ret]
+  copy "libd" (cstr.eq) if [ (addlibd) disc ret] 
   disc
+
+  2 0 (log.level)
+  "ERR" "invalid command: `" (log.msg)
+  cmdbuffer (log.cat)
+  "`" (log.cat)
   
-  ret
+  255 quit
 end
 
 proc checkcmd 0 1

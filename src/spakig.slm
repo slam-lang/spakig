@@ -1,6 +1,6 @@
 inc stdlib.slm
-inc log.slm
-inc os.slm
+inc stdlib/log.slm
+inc stdlib/os.slm
 
 proc version 0 1
   "0.0.0" ret
@@ -17,15 +17,54 @@ const READSIZE 1024
 
 var tempcommand 64
 var tempclone 64
-var temppath 64
-var cachepath 128
+var temppath 256
+var cachepath 256
 
-var srcpath 128
-
+var srcpath 256
+var libpath 256
+var binpath 256
 var inputfd int.SIZE
 var readbuffer int.SIZE
 var cmdbuffer READSIZE
 var _ 1
+
+var stack int.SIZE
+var stacktop int.SIZE
+
+proc inner 1 1
+  1 + copy
+  copy (cstr.len) 1 - + 0 putc disc
+  ret
+end
+
+proc pushstack 1 0
+  (inner) copy (cstr.len) 1 + (heap.zalloc) swap (cstr.copy) (cstr.len) covr + 1 + 0 putc disc
+  stack read
+  stacktop read +
+  copy read 0 != if [
+    copy read (heap.free)
+  ]
+  swap
+  put disc
+
+  stacktop
+  copy read int.SIZE +
+  put disc
+
+  ret
+end
+
+proc popstack 0 1
+  stacktop
+  copy read int.SIZE -
+  put disc
+
+  stack read
+  stacktop read +
+  read
+
+  ret
+end
 
 proc help 1 0
   copy HELP_VERSION == if [
@@ -108,21 +147,76 @@ proc pullrepo 0 0
 end
 
 proc setsrc 0 0
-  "lol" (cstr.println)
+  srcpath (cstr.clear) cachepath (cstr.copy) disc
+  "/" (cstr.cat)
+  (popstack) (cstr.cat)
+  "/" (cstr.cat)
+  disc
+
+  ret
+end
+
+proc addbin 0 0
+  srcpath (cstr.println)
+  ret
+end
+
+proc addlibd 0 0
+  libpath (cstr.clear) srcpath (cstr.copy) disc
+  (popstack) (cstr.cat)
+  disc
+
+  temppath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/lib/" (cstr.cat)
+  disc
+
+  tempcommand
+  "/usr/bin/cp" put int.SIZE +
+  "-r" put int.SIZE +
+  libpath put int.SIZE +
+  temppath put int.SIZE +
+  NULL put int.SIZE +
+  disc
+
+  tempcommand (os.execcmdecho)
+
+  ret
+end
+
+proc addlib 0 0
+  libpath (cstr.clear) srcpath (cstr.copy) disc
+  (popstack) (cstr.cat)
+  disc
+
+  temppath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/lib/" (cstr.cat)
+  disc
+
+  tempcommand
+  "/usr/bin/cp" put int.SIZE +
+  libpath put int.SIZE +
+  temppath put int.SIZE +
+  NULL put int.SIZE +
+  disc
+
+  tempcommand (os.execcmdecho)
 
   ret
 end
 
 proc parsecmd 0 0
   cmdbuffer readc '"' == cmdbuffer (cstr.last) '"' == && if [
-    cmdbuffer (cstr.println)
+    cmdbuffer (pushstack)
 
     cmdbuffer (cstr.clear) disc
 
     ret
   ]
   cmdbuffer
-  copy "src" (cstr.eq) if (setsrc) 
+  copy "src"  (cstr.eq) if (setsrc) 
+  copy "bin"  (cstr.eq) if (addbin)
+  copy "lib"  (cstr.eq) if (addlib) 
+  copy "libd" (cstr.eq) if (addlibd) 
   disc
   
   ret
@@ -147,6 +241,8 @@ end
 
 
 proc parsefile 0 0
+  stack 1024 (heap.zalloc) put disc
+
   inputfd read 0 == if ret
   READSIZE READSIZE (heap.zalloc)
   readbuffer swap put read
@@ -205,13 +301,21 @@ end
 proc install 0 0
   2 argc == if [HELP_PACKAGE (help)]
   
-  cachepath "HOME" (os.env) (cstr.copy) disc
+  cachepath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
   "/.local/slam/cache/" (cstr.cat) disc
+ 
+  libpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/lib/" (cstr.cat) disc
+
+  binpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/bin/" (cstr.cat) disc
 
   tempcommand
   "/usr/bin/mkdir" put int.SIZE +
   "-p" put int.SIZE +
   cachepath put int.SIZE +
+  binpath put int.SIZE +
+  libpath put int.SIZE +
   NULL put disc
 
   temppath (cstr.clear) cachepath (cstr.copy) disc

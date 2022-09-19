@@ -1,0 +1,10098 @@
+format ELF64
+section '.text' executable
+public _start
+
+print:
+    mov r10, rsp
+    sub rsp, 8
+    mov [rsp], al
+    mov edi, 1
+    mov rsi, rsp
+    mov edx, 1
+    mov eax, 1
+    syscall
+    mov rsp, r10
+    ret
+addr_0:
+addr_1:
+addr_2:
+addr_3:
+addr_4:
+addr_5:
+addr_6:
+addr_7:
+addr_8:
+addr_9:
+addr_10:
+addr_11:
+    ; - proc len 1 1
+addr_12:
+    pop rax
+    push rax
+    push rax
+addr_13:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_14:
+    mov qword rax, 0
+    push rax
+addr_15:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_16:
+    pop rbx
+    test rbx, rbx
+    jz addr_18
+addr_17:
+addr_17_0:
+    pop rax
+addr_17_1:
+    mov qword rax, 0
+    push rax
+addr_17_2:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_17_3:
+addr_18:
+    pop rax
+    push rax
+    push rax
+addr_19:
+addr_20:
+    mov qword rax, 1
+    push rax
+addr_21:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_22:
+    pop rax
+    push rax
+    push rax
+addr_23:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_24:
+    pop rbx
+    test rbx, rbx
+    jz addr_25
+    jmp addr_19
+addr_25:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_26:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_27:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_28:
+    pop rax
+addr_29:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_30:
+addr_31:
+    ; - proc print 1 0
+addr_32:
+    pop rax
+    push rax
+    push rax
+addr_33:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_34
+    jmp addr_12
+addr_34:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_35:
+    mov qword rax, 1
+    push rax
+addr_36:
+    mov qword rax, 1
+    push rax
+addr_37:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    syscall
+    push rax
+addr_38:
+    pop rax
+addr_39:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_40:
+addr_41:
+    ; - proc cr 0 0
+addr_42:
+    push 1
+    push str_0
+addr_43:
+    mov qword rax, 1
+    push rax
+addr_44:
+    mov qword rax, 1
+    push rax
+addr_45:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    syscall
+    push rax
+addr_46:
+    pop rax
+addr_47:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_48:
+addr_49:
+    ; - proc println 1 0
+addr_50:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_51
+    jmp addr_32
+addr_51:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_52
+    jmp addr_42
+addr_52:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_53:
+addr_54:
+    ; - proc eq 2 1
+addr_55:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_56:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_57:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_58:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_59:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_60:
+    pop rbx
+    test rbx, rbx
+    jz addr_62
+addr_61:
+addr_61_0:
+    pop rax
+addr_61_1:
+    pop rax
+addr_61_2:
+    mov qword rax, 0
+    push rax
+addr_61_3:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_61_4:
+addr_62:
+    mov qword rax, 1
+    push rax
+addr_63:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_64:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_65:
+    mov qword rax, 1
+    push rax
+addr_66:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_67:
+addr_68:
+    mov qword rax, 1
+    push rax
+addr_69:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_70:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_71:
+    mov qword rax, 1
+    push rax
+addr_72:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_73:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_74:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_75:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_76:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_77:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_78:
+    mov qword rax, 0
+    push rax
+addr_79:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_80:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_81:
+    mov qword rax, 0
+    push rax
+addr_82:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_83:
+    pop rbx
+    pop rax
+    and rax, rbx
+    push rax
+addr_84:
+    pop rbx
+    test rbx, rbx
+    jz addr_86
+addr_85:
+addr_85_0:
+    pop rax
+addr_85_1:
+    pop rax
+addr_85_2:
+    pop rax
+addr_85_3:
+    pop rax
+addr_85_4:
+    mov qword rax, 1
+    push rax
+addr_85_5:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_85_6:
+addr_86:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_87:
+    mov qword rax, 0
+    push rax
+addr_88:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_89:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_90:
+    mov qword rax, 0
+    push rax
+addr_91:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_92:
+    pop rbx
+    pop rax
+    or rax, rbx
+    push rax
+addr_93:
+    pop rbx
+    test rbx, rbx
+    jz addr_95
+addr_94:
+addr_94_0:
+    pop rax
+addr_94_1:
+    pop rax
+addr_94_2:
+    pop rax
+addr_94_3:
+    pop rax
+addr_94_4:
+    mov qword rax, 0
+    push rax
+addr_94_5:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_94_6:
+addr_95:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_96:
+    pop rbx
+    test rbx, rbx
+    jz addr_97
+    jmp addr_67
+addr_97:
+    pop rax
+addr_98:
+    pop rax
+addr_99:
+    mov qword rax, 0
+    push rax
+addr_100:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_101:
+addr_102:
+    ; - proc copy 2 2
+addr_103:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_104:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_105:
+addr_106:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_107:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_108:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_109:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_110:
+    pop rax
+addr_111:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_112:
+    mov qword rax, 1
+    push rax
+addr_113:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_114:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_115:
+    mov qword rax, 1
+    push rax
+addr_116:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_117:
+    pop rax
+    push rax
+    push rax
+addr_118:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_119:
+    mov qword rax, 0
+    push rax
+addr_120:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_121:
+    pop rbx
+    test rbx, rbx
+    jz addr_122
+    jmp addr_105
+addr_122:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_123:
+    mov qword rax, 1
+    push rax
+addr_124:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_125:
+    mov qword rax, 0
+    push rax
+addr_126:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_127:
+    pop rax
+addr_128:
+    pop rax
+addr_129:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_130:
+addr_131:
+    ; - proc last 1 1
+addr_132:
+    mov qword rax, 1
+    push rax
+addr_133:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_134:
+addr_135:
+    mov qword rax, 1
+    push rax
+addr_136:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_137:
+    pop rax
+    push rax
+    push rax
+addr_138:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_139:
+    mov qword rax, 0
+    push rax
+addr_140:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_141:
+    pop rbx
+    test rbx, rbx
+    jz addr_142
+    jmp addr_134
+addr_142:
+    mov qword rax, 1
+    push rax
+addr_143:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_144:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_145:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_146:
+addr_147:
+    ; - proc clear 1 1
+addr_148:
+    pop rax
+    push rax
+    push rax
+addr_149:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_150:
+    mov qword rax, 0
+    push rax
+addr_151:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_152:
+    pop rbx
+    test rbx, rbx
+    jz addr_154
+addr_153:
+addr_153_0:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_153_1:
+addr_154:
+    pop rax
+    push rax
+    push rax
+addr_155:
+addr_156:
+    pop rax
+    push rax
+    push rax
+addr_157:
+    mov qword rax, 0
+    push rax
+addr_158:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_159:
+    pop rax
+addr_160:
+    mov qword rax, 1
+    push rax
+addr_161:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_162:
+    pop rax
+    push rax
+    push rax
+addr_163:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_164:
+    pop rbx
+    test rbx, rbx
+    jz addr_165
+    jmp addr_155
+addr_165:
+    pop rax
+addr_166:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_167:
+addr_168:
+    ; - proc cat 2 1
+addr_169:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_170:
+    pop rax
+    push rax
+    push rax
+addr_171:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_172
+    jmp addr_12
+addr_172:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_173:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_174:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_175
+    jmp addr_103
+addr_175:
+    pop rax
+addr_176:
+    pop rax
+addr_177:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_178:
+addr_179:
+    ; - proc isnum 1 1
+addr_180:
+    push mem+0
+addr_181:
+    mov qword rax, 48
+    push rax
+addr_182:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_183:
+    pop rax
+addr_184:
+    push mem+1
+addr_185:
+    mov qword rax, 57
+    push rax
+addr_186:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_187:
+    pop rax
+addr_188:
+    pop rax
+    push rax
+    push rax
+addr_189:
+    pop rax
+    push rax
+    push rax
+addr_190:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_191
+    jmp addr_12
+addr_191:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_192:
+    mov qword rax, 1
+    push rax
+addr_193:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_194:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_195:
+    pop rax
+    push rax
+    push rax
+addr_196:
+    mov qword rax, 98
+    push rax
+addr_197:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_198:
+    pop rbx
+    test rbx, rbx
+    jz addr_200
+addr_199:
+addr_199_0:
+    push mem+1
+addr_199_1:
+    mov qword rax, 49
+    push rax
+addr_199_2:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_199_3:
+    pop rax
+addr_199_4:
+addr_200:
+    pop rax
+    push rax
+    push rax
+addr_201:
+    mov qword rax, 104
+    push rax
+addr_202:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_203:
+    pop rbx
+    test rbx, rbx
+    jz addr_205
+addr_204:
+addr_204_0:
+    push mem+1
+addr_204_1:
+    mov qword rax, 102
+    push rax
+addr_204_2:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_204_3:
+    pop rax
+addr_204_4:
+addr_205:
+    pop rax
+addr_206:
+    pop rax
+    push rax
+    push rax
+addr_207:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_208:
+    mov qword rax, 45
+    push rax
+addr_209:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_210:
+    pop rbx
+    test rbx, rbx
+    jz addr_212
+addr_211:
+addr_211_0:
+    mov qword rax, 1
+    push rax
+addr_211_1:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_211_2:
+addr_212:
+addr_213:
+    pop rax
+    push rax
+    push rax
+addr_214:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_215:
+    pop rax
+    push rax
+    push rax
+addr_216:
+    push mem+0
+addr_217:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_218:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_219:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_220:
+    push mem+1
+addr_221:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_222:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_223:
+    pop rbx
+    pop rax
+    or rax, rbx
+    push rax
+addr_224:
+    pop rbx
+    test rbx, rbx
+    jz addr_226
+addr_225:
+addr_225_0:
+    pop rax
+addr_225_1:
+    pop rax
+    push rax
+    push rax
+addr_225_2:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_225_3:
+    mov qword rax, 98
+    push rax
+addr_225_4:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_225_5:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_225_6:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_225_7:
+    mov qword rax, 104
+    push rax
+addr_225_8:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_225_9:
+    pop rbx
+    pop rax
+    or rax, rbx
+    push rax
+addr_225_10:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_225_11:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_225_12
+    jmp addr_12
+addr_225_12:
+    mov qword rax, 1
+    push rax
+addr_225_13:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_225_14:
+    pop rbx
+    pop rax
+    and rax, rbx
+    push rax
+addr_225_15:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_225_16:
+    pop rax
+addr_225_17:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_225_18:
+addr_226:
+    pop rax
+addr_227:
+    mov qword rax, 1
+    push rax
+addr_228:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_229:
+    pop rax
+    push rax
+    push rax
+addr_230:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_231:
+    mov qword rax, 0
+    push rax
+addr_232:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_233:
+    pop rbx
+    test rbx, rbx
+    jz addr_234
+    jmp addr_212
+addr_234:
+    pop rax
+addr_235:
+    mov qword rax, 1
+    push rax
+addr_236:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_237:
+addr_238:
+    ; - proc tonum 1 1
+addr_239:
+    pop rax
+    push rax
+    push rax
+addr_240:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_241
+    jmp addr_180
+addr_241:
+    pop rax
+    xor rax, 1
+    push rax
+addr_242:
+    pop rbx
+    test rbx, rbx
+    jz addr_244
+addr_243:
+addr_243_0:
+    pop rax
+    push rax
+    push rax
+addr_243_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_243_2
+    jmp addr_50
+addr_243_2:
+    push str_1
+addr_243_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_243_4
+    jmp addr_50
+addr_243_4:
+    pop rax
+addr_243_5:
+    mov qword rax, -1
+    push rax
+addr_243_6:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_243_7:
+addr_244:
+    push mem+2
+addr_245:
+    mov qword rax, 10
+    push rax
+addr_246:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_247:
+    pop rax
+addr_248:
+    pop rax
+    push rax
+    push rax
+addr_249:
+    pop rax
+    push rax
+    push rax
+addr_250:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_251
+    jmp addr_12
+addr_251:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_252:
+    mov qword rax, 1
+    push rax
+addr_253:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_254:
+    pop rax
+    push rax
+    push rax
+addr_255:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_256:
+    mov qword rax, 98
+    push rax
+addr_257:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_258:
+    pop rbx
+    test rbx, rbx
+    jz addr_260
+addr_259:
+addr_259_0:
+    push mem+2
+addr_259_1:
+    mov qword rax, 2
+    push rax
+addr_259_2:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_259_3:
+    pop rax
+addr_259_4:
+addr_260:
+    pop rax
+    push rax
+    push rax
+addr_261:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_262:
+    mov qword rax, 104
+    push rax
+addr_263:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_264:
+    pop rbx
+    test rbx, rbx
+    jz addr_266
+addr_265:
+addr_265_0:
+    push mem+2
+addr_265_1:
+    mov qword rax, 16
+    push rax
+addr_265_2:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_265_3:
+    pop rax
+addr_265_4:
+addr_266:
+    pop rax
+addr_267:
+    mov qword rax, 0
+    push rax
+addr_268:
+addr_269:
+    push mem+2
+addr_270:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_271:
+    pop rax
+    pop rbx
+    imul rax, rbx
+    push rax
+addr_272:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_273:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_274:
+    pop rax
+    push rax
+    push rax
+addr_275:
+    mov qword rax, 70
+    push rax
+addr_276:
+    mov qword rax, 1
+    push rax
+addr_277:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_278:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_279:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_280:
+    mov qword rax, 65
+    push rax
+addr_281:
+    mov qword rax, 1
+    push rax
+addr_282:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_283:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_284:
+    pop rbx
+    pop rax
+    and rax, rbx
+    push rax
+addr_285:
+    pop rbx
+    test rbx, rbx
+    jz addr_287
+addr_286:
+addr_286_0:
+    mov qword rax, 65
+    push rax
+addr_286_1:
+    mov qword rax, 10
+    push rax
+addr_286_2:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_286_3:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_286_4:
+    mov qword rax, 48
+    push rax
+addr_286_5:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_286_6:
+addr_287:
+    mov qword rax, 48
+    push rax
+addr_288:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_289:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_290:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_291:
+    mov qword rax, 1
+    push rax
+addr_292:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_293:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_294:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_295:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_296:
+    pop rax
+    push rax
+    push rax
+addr_297:
+    mov qword rax, 0
+    push rax
+addr_298:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_299:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_300:
+    mov qword rax, 98
+    push rax
+addr_301:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_302:
+    pop rbx
+    pop rax
+    and rax, rbx
+    push rax
+addr_303:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_304:
+    mov qword rax, 104
+    push rax
+addr_305:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_306:
+    pop rbx
+    pop rax
+    and rax, rbx
+    push rax
+addr_307:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_308:
+    pop rax
+addr_309:
+    pop rbx
+    test rbx, rbx
+    jz addr_310
+    jmp addr_268
+addr_310:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_311:
+    pop rax
+addr_312:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_313:
+addr_314:
+addr_315:
+addr_316:
+    ; - proc split 3 2
+addr_317:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_318:
+    push mem+3
+addr_319:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_320:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_321:
+    pop rax
+addr_322:
+    push mem+4
+addr_323:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_324:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_325:
+    pop rax
+addr_326:
+    push mem+4
+addr_327:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_328:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_329
+    jmp addr_148
+addr_329:
+addr_330:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_331:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_332:
+    push mem+3
+addr_333:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_334:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_335:
+    pop rbx
+    test rbx, rbx
+    jz addr_337
+addr_336:
+addr_336_0:
+    pop rax
+addr_336_1:
+    mov qword rax, 1
+    push rax
+addr_336_2:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_336_3:
+    push mem+4
+addr_336_4:
+   pop rax
+   xor rbx, rbx
+   mov rbx, [rax]
+   push rbx
+addr_336_5:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_336_6:
+addr_337:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_338:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_339:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_340:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_341:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_342:
+    pop rax
+addr_343:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_344:
+    mov qword rax, 1
+    push rax
+addr_345:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_346:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_347:
+    mov qword rax, 1
+    push rax
+addr_348:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_349:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_350:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_351:
+    mov qword rax, 0
+    push rax
+addr_352:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_353:
+    pop rbx
+    test rbx, rbx
+    jz addr_354
+    jmp addr_329
+addr_354:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_355:
+addr_356:
+addr_357:
+addr_358:
+addr_359:
+addr_360:
+    ; - proc gettmp 0 1
+addr_361:
+    push mem+20
+addr_362:
+    mov qword rax, 30
+    push rax
+addr_363:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_364:
+    push mem+12
+addr_365:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_366:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_367:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_368:
+addr_369:
+    ; - proc inctmpidx 0 0
+addr_370:
+    push mem+12
+addr_371:
+    push mem+12
+addr_372:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_373:
+    mov qword rax, 1
+    push rax
+addr_374:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_375:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_376:
+    pop rax
+addr_377:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_378:
+addr_379:
+    ; - proc cstr 1 1
+addr_380:
+addr_381:
+    mov qword rax, 10
+    push rax
+addr_382:
+    xor rdx, rdx
+    pop rbx
+    pop rax
+    idiv rbx
+    push rax
+    push rdx
+addr_383:
+    mov qword rax, 48
+    push rax
+addr_384:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_385:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_386
+    jmp addr_361
+addr_386:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_387:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_388:
+    pop rax
+addr_389:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_390
+    jmp addr_370
+addr_390:
+    pop rax
+    push rax
+    push rax
+addr_391:
+    mov qword rax, 0
+    push rax
+addr_392:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_393:
+    pop rbx
+    test rbx, rbx
+    jz addr_394
+    jmp addr_380
+addr_394:
+    pop rax
+addr_395:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_396
+    jmp addr_361
+addr_396:
+    mov qword rax, 1
+    push rax
+addr_397:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_398:
+    push mem+12
+addr_399:
+    mov qword rax, 0
+    push rax
+addr_400:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_401:
+    pop rax
+addr_402:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_403:
+addr_404:
+    ; - proc cstrhex 1 1
+addr_405:
+addr_406:
+    mov qword rax, 16
+    push rax
+addr_407:
+    xor rdx, rdx
+    pop rbx
+    pop rax
+    idiv rbx
+    push rax
+    push rdx
+addr_408:
+    pop rax
+    push rax
+    push rax
+addr_409:
+    mov qword rax, 9
+    push rax
+addr_410:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_411:
+    pop rbx
+    test rbx, rbx
+    jz addr_413
+addr_412:
+addr_412_0:
+    mov qword rax, 97
+    push rax
+addr_412_1:
+    mov qword rax, 10
+    push rax
+addr_412_2:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_412_3:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_412_4:
+addr_413:
+    pop rax
+    push rax
+    push rax
+addr_414:
+    mov qword rax, 10
+    push rax
+addr_415:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_416:
+    pop rbx
+    test rbx, rbx
+    jz addr_418
+addr_417:
+addr_417_0:
+    mov qword rax, 48
+    push rax
+addr_417_1:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_417_2:
+addr_418:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_419
+    jmp addr_361
+addr_419:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_420:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_421:
+    pop rax
+addr_422:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_423
+    jmp addr_370
+addr_423:
+    pop rax
+    push rax
+    push rax
+addr_424:
+    mov qword rax, 0
+    push rax
+addr_425:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_426:
+    pop rbx
+    test rbx, rbx
+    jz addr_427
+    jmp addr_405
+addr_427:
+    pop rax
+addr_428:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_429
+    jmp addr_361
+addr_429:
+    mov qword rax, 36
+    push rax
+addr_430:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_431:
+    pop rax
+addr_432:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_433
+    jmp addr_370
+addr_433:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_434
+    jmp addr_361
+addr_434:
+    mov qword rax, 1
+    push rax
+addr_435:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_436:
+    push mem+12
+addr_437:
+    mov qword rax, 0
+    push rax
+addr_438:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_439:
+    pop rax
+addr_440:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_441:
+addr_442:
+    ; - proc print 1 0
+addr_443:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_444
+    jmp addr_380
+addr_444:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_445
+    jmp addr_32
+addr_445:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_446
+    jmp addr_42
+addr_446:
+    push mem+12
+addr_447:
+    mov qword rax, 0
+    push rax
+addr_448:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_449:
+    pop rax
+addr_450:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_451:
+addr_452:
+    ; - proc printhex 1 0
+addr_453:
+addr_454:
+    mov qword rax, 16
+    push rax
+addr_455:
+    xor rdx, rdx
+    pop rbx
+    pop rax
+    idiv rbx
+    push rax
+    push rdx
+addr_456:
+    pop rax
+    push rax
+    push rax
+addr_457:
+    mov qword rax, 9
+    push rax
+addr_458:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_459:
+    pop rbx
+    test rbx, rbx
+    jz addr_461
+addr_460:
+addr_460_0:
+    mov qword rax, 97
+    push rax
+addr_460_1:
+    mov qword rax, 10
+    push rax
+addr_460_2:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_460_3:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_460_4:
+addr_461:
+    pop rax
+    push rax
+    push rax
+addr_462:
+    mov qword rax, 10
+    push rax
+addr_463:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_464:
+    pop rbx
+    test rbx, rbx
+    jz addr_466
+addr_465:
+addr_465_0:
+    mov qword rax, 48
+    push rax
+addr_465_1:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_465_2:
+addr_466:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_467
+    jmp addr_361
+addr_467:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_468:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_469:
+    pop rax
+addr_470:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_471
+    jmp addr_370
+addr_471:
+    pop rax
+    push rax
+    push rax
+addr_472:
+    mov qword rax, 0
+    push rax
+addr_473:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_474:
+    pop rbx
+    test rbx, rbx
+    jz addr_475
+    jmp addr_453
+addr_475:
+    pop rax
+addr_476:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_477
+    jmp addr_361
+addr_477:
+    mov qword rax, 120
+    push rax
+addr_478:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_479:
+    pop rax
+addr_480:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_481
+    jmp addr_370
+addr_481:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_482
+    jmp addr_361
+addr_482:
+    mov qword rax, 48
+    push rax
+addr_483:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_484:
+    pop rax
+addr_485:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_486
+    jmp addr_370
+addr_486:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_487
+    jmp addr_361
+addr_487:
+    mov qword rax, 1
+    push rax
+addr_488:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_489:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_490
+    jmp addr_32
+addr_490:
+    push mem+12
+addr_491:
+    mov qword rax, 0
+    push rax
+addr_492:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_493:
+    pop rax
+addr_494:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_495
+    jmp addr_42
+addr_495:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_496:
+addr_497:
+addr_498:
+addr_499:
+    ; - proc / 2 1
+addr_500:
+    xor rdx, rdx
+    pop rbx
+    pop rax
+    idiv rbx
+    push rax
+    push rdx
+addr_501:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_502:
+    pop rax
+addr_503:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_504:
+addr_505:
+addr_506:
+    ; - proc % 2 1
+addr_507:
+    xor rdx, rdx
+    pop rbx
+    pop rax
+    idiv rbx
+    push rax
+    push rdx
+addr_508:
+    pop rax
+addr_509:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_510:
+addr_511:
+addr_512:
+addr_513:
+addr_514:
+addr_515:
+addr_516:
+addr_517:
+addr_518:
+addr_519:
+addr_520:
+    ; - proc isentry 1 1
+addr_521:
+    pop rax
+    push rax
+    push rax
+addr_522:
+    pop rax
+    push rax
+    push rax
+addr_523:
+    mov qword rax, 0
+    push rax
+addr_524:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_525:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_526:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_527:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_528:
+    mov qword rax, 8
+    push rax
+addr_529:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_530:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_531:
+    mov qword rax, 1
+    push rax
+addr_532:
+    pop rbx
+    pop rax
+    and rax, rbx
+    push rax
+addr_533:
+    mov qword rax, 0
+    push rax
+addr_534:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_535:
+    pop rbx
+    pop rax
+    and rax, rbx
+    push rax
+addr_536:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_537:
+    pop rax
+addr_538:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_539:
+addr_540:
+addr_541:
+addr_542:
+addr_543:
+    ; - proc copy 3 0
+addr_544:
+    push mem+52
+addr_545:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_546:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_547:
+    pop rax
+addr_548:
+addr_549:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_550:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_551:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_552:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_553:
+    pop rax
+addr_554:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_555:
+    mov qword rax, 1
+    push rax
+addr_556:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_557:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_558:
+    mov qword rax, 1
+    push rax
+addr_559:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_560:
+    push mem+52
+addr_561:
+    push mem+52
+addr_562:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_563:
+    mov qword rax, 1
+    push rax
+addr_564:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_565:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_566:
+    pop rax
+addr_567:
+    push mem+52
+addr_568:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_569:
+    mov qword rax, 0
+    push rax
+addr_570:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_571:
+    pop rbx
+    test rbx, rbx
+    jz addr_572
+    jmp addr_548
+addr_572:
+    pop rax
+addr_573:
+    pop rax
+addr_574:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_575:
+addr_576:
+    ; - proc eq 3 1
+addr_577:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_578:
+    push mem+52
+addr_579:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_580:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_581:
+    pop rax
+addr_582:
+addr_583:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_584:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_585:
+    push mem+52
+addr_586:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_587:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_588:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_589:
+    pop rbx
+    test rbx, rbx
+    jz addr_591
+addr_590:
+addr_590_0:
+    pop rax
+addr_590_1:
+    pop rax
+addr_590_2:
+    mov qword rax, 0
+    push rax
+addr_590_3:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_590_4:
+addr_591:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_592:
+    mov qword rax, 1
+    push rax
+addr_593:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_594:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_595:
+    mov qword rax, 1
+    push rax
+addr_596:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_597:
+    push mem+52
+addr_598:
+    pop rax
+    push rax
+    push rax
+addr_599:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_600:
+    mov qword rax, 1
+    push rax
+addr_601:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_602:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_603:
+    pop rax
+addr_604:
+    pop rax
+    push rax
+    push rax
+addr_605:
+    mov qword rax, 0
+    push rax
+addr_606:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_607:
+    pop rbx
+    test rbx, rbx
+    jz addr_608
+    jmp addr_582
+addr_608:
+    pop rax
+addr_609:
+    pop rax
+addr_610:
+    mov qword rax, 1
+    push rax
+addr_611:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_612:
+addr_613:
+    ; - proc zero 2 0
+addr_614:
+    push mem+52
+addr_615:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_616:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_617:
+    pop rax
+addr_618:
+addr_619:
+    pop rax
+    push rax
+    push rax
+addr_620:
+    mov qword rax, 0
+    push rax
+addr_621:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_622:
+    pop rax
+addr_623:
+    mov qword rax, 1
+    push rax
+addr_624:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_625:
+    push mem+52
+addr_626:
+    push mem+52
+addr_627:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_628:
+    mov qword rax, 1
+    push rax
+addr_629:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_630:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_631:
+    pop rax
+addr_632:
+    push mem+52
+addr_633:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_634:
+    mov qword rax, 0
+    push rax
+addr_635:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_636:
+    pop rbx
+    test rbx, rbx
+    jz addr_637
+    jmp addr_618
+addr_637:
+    pop rax
+addr_638:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_639:
+addr_640:
+addr_641:
+addr_642:
+addr_643:
+addr_644:
+addr_645:
+addr_646:
+addr_647:
+addr_648:
+addr_649:
+    ; - proc allocpage 0 0
+addr_650:
+    push mem+68
+addr_651:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_652:
+    mov qword rax, 64000
+    push rax
+addr_653:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_654:
+    pop rax
+    push rax
+    push rax
+addr_655:
+    push mem+68
+addr_656:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_657:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_658:
+    pop rax
+addr_659:
+    mov qword rax, 12
+    push rax
+addr_660:
+    pop rax
+    pop rdi
+    syscall
+    push rax
+addr_661:
+    mov qword rax, 0
+    push rax
+addr_662:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_663:
+    pop rbx
+    test rbx, rbx
+    jz addr_665
+addr_664:
+addr_664_0:
+    push str_2
+addr_664_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_664_2
+    jmp addr_50
+addr_664_2:
+addr_665:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_666:
+addr_667:
+    ; - proc init 0 0
+addr_668:
+    push mem+92
+addr_669:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_670:
+    pop rbx
+    test rbx, rbx
+    jz addr_672
+addr_671:
+addr_671_0:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_671_1:
+addr_672:
+    push mem+92
+addr_673:
+    mov qword rax, 1
+    push rax
+addr_674:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_675:
+    pop rax
+addr_676:
+    push mem+60
+addr_677:
+    mov qword rax, 0
+    push rax
+addr_678:
+    mov qword rax, 12
+    push rax
+addr_679:
+    pop rax
+    pop rdi
+    syscall
+    push rax
+addr_680:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_681:
+    pop rax
+addr_682:
+    push mem+68
+addr_683:
+    push mem+60
+addr_684:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_685:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_686:
+    pop rax
+addr_687:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_688
+    jmp addr_650
+addr_688:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_689:
+addr_690:
+    ; - proc map 0 0
+addr_691:
+    push mem+84
+addr_692:
+    mov qword rax, 0
+    push rax
+addr_693:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_694:
+    pop rax
+addr_695:
+    push str_3
+addr_696:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_697
+    jmp addr_50
+addr_697:
+    push str_4
+addr_698:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_699
+    jmp addr_50
+addr_699:
+    push str_5
+addr_700:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_701
+    jmp addr_32
+addr_701:
+    push mem+68
+addr_702:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_703:
+    push mem+60
+addr_704:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_705:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_706:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_707
+    jmp addr_443
+addr_707:
+    push mem+60
+addr_708:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_709:
+    mov qword rax, 128
+    push rax
+addr_710:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_711:
+addr_712:
+    mov qword rax, 128
+    push rax
+addr_713:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_714:
+    pop rax
+    push rax
+    push rax
+addr_715:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_716
+    jmp addr_521
+addr_716:
+    pop rbx
+    test rbx, rbx
+    jz addr_718
+addr_717:
+addr_717_0:
+    push str_6
+addr_717_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_717_2
+    jmp addr_50
+addr_717_2:
+    push str_7
+addr_717_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_717_4
+    jmp addr_32
+addr_717_4:
+    pop rax
+    push rax
+    push rax
+addr_717_5:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_717_6
+    jmp addr_453
+addr_717_6:
+    push str_8
+addr_717_7:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_717_8
+    jmp addr_32
+addr_717_8:
+    pop rax
+    push rax
+    push rax
+addr_717_9:
+    mov qword rax, 9
+    push rax
+addr_717_10:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_717_11:
+   pop rax
+   xor rbx, rbx
+   mov rbx, [rax]
+   push rbx
+addr_717_12:
+    pop rax
+    push rax
+    push rax
+addr_717_13:
+    push mem+84
+addr_717_14:
+   pop rax
+   xor rbx, rbx
+   mov rbx, [rax]
+   push rbx
+addr_717_15:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_717_16:
+    push mem+84
+addr_717_17:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_717_18:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_717_19:
+    pop rax
+addr_717_20:
+    pop rax
+    push rax
+    push rax
+addr_717_21:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_717_22
+    jmp addr_443
+addr_717_22:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_717_23:
+    mov qword rax, 128
+    push rax
+addr_717_24:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_717_25:
+addr_718:
+    pop rax
+    push rax
+    push rax
+addr_719:
+    push mem+68
+addr_720:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_721:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_722:
+    pop rbx
+    test rbx, rbx
+    jz addr_723
+    jmp addr_711
+addr_723:
+    pop rax
+addr_724:
+    push str_9
+addr_725:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_726
+    jmp addr_32
+addr_726:
+    push mem+84
+addr_727:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_728:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_729
+    jmp addr_443
+addr_729:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_730
+    jmp addr_42
+addr_730:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_731:
+addr_732:
+    ; - proc alloc 1 1
+addr_733:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_734
+    jmp addr_668
+addr_734:
+    mov qword rax, 17
+    push rax
+addr_735:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_736:
+    pop rax
+    push rax
+    push rax
+addr_737:
+    mov qword rax, 128
+    push rax
+addr_738:
+    xor rdx, rdx
+    pop rbx
+    pop rax
+    idiv rbx
+    push rax
+    push rdx
+addr_739:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_740:
+    pop rax
+addr_741:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_742:
+    mov qword rax, 128
+    push rax
+addr_743:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_744:
+    push mem+76
+addr_745:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_746:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_747:
+    pop rax
+addr_748:
+    mov qword rax, 0
+    push rax
+addr_749:
+    push mem+60
+addr_750:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_751:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_752:
+    mov qword rax, 128
+    push rax
+addr_753:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_754:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_755:
+    mov qword rax, 128
+    push rax
+addr_756:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_757:
+addr_758:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_759:
+    mov qword rax, 128
+    push rax
+addr_760:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_761:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_762:
+    mov qword rax, 128
+    push rax
+addr_763:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_764:
+    pop rax
+    push rax
+    push rax
+addr_765:
+    push mem+68
+addr_766:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_767:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_768:
+    pop rax
+    xor rax, 1
+    push rax
+addr_769:
+    pop rbx
+    test rbx, rbx
+    jz addr_771
+addr_770:
+addr_770_0:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_770_1
+    jmp addr_650
+addr_770_1:
+addr_771:
+    pop rax
+    push rax
+    push rax
+addr_772:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_773
+    jmp addr_521
+addr_773:
+    pop rbx
+    test rbx, rbx
+    jz addr_775
+addr_774:
+addr_774_0:
+    pop rax
+    push rax
+    push rax
+addr_774_1:
+    mov qword rax, 9
+    push rax
+addr_774_2:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_774_3:
+   pop rax
+   xor rbx, rbx
+   mov rbx, [rax]
+   push rbx
+addr_774_4:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_774_5:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_774_6:
+    pop rax
+addr_774_7:
+    mov qword rax, 0
+    push rax
+addr_774_8:
+    mov qword rax, 128
+    push rax
+addr_774_9:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_774_10:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_774_11:
+    mov qword rax, 128
+    push rax
+addr_774_12:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_774_13:
+addr_775:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_776:
+    push mem+76
+addr_777:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_778:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_779:
+    pop rbx
+    test rbx, rbx
+    jz addr_780
+    jmp addr_757
+addr_780:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_781:
+    pop rax
+addr_782:
+    push mem+76
+addr_783:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_784:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_785:
+    pop rax
+    push rax
+    push rax
+addr_786:
+    mov qword rax, 9
+    push rax
+addr_787:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_788:
+    push mem+76
+addr_789:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_790:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_791:
+    pop rax
+addr_792:
+    pop rax
+    push rax
+    push rax
+addr_793:
+    pop rax
+    push rax
+    push rax
+addr_794:
+    mov qword rax, 0
+    push rax
+addr_795:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_796:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_797:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_798:
+    pop rax
+addr_799:
+    pop rax
+    push rax
+    push rax
+addr_800:
+    mov qword rax, 8
+    push rax
+addr_801:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_802:
+    mov qword rax, 1
+    push rax
+addr_803:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_804:
+    pop rax
+addr_805:
+    mov qword rax, 17
+    push rax
+addr_806:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_807:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_808:
+addr_809:
+    ; - proc zalloc 1 1
+addr_810:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_811
+    jmp addr_668
+addr_811:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_812
+    jmp addr_733
+addr_812:
+    pop rax
+    push rax
+    push rax
+addr_813:
+    pop rax
+    push rax
+    push rax
+addr_814:
+    mov qword rax, 17
+    push rax
+addr_815:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_816:
+    mov qword rax, 9
+    push rax
+addr_817:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_818:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_819:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_820
+    jmp addr_614
+addr_820:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_821:
+addr_822:
+    ; - proc free 1 0
+addr_823:
+    mov qword rax, 17
+    push rax
+addr_824:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_825:
+    pop rax
+    push rax
+    push rax
+addr_826:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_827
+    jmp addr_521
+addr_827:
+    pop rax
+    xor rax, 1
+    push rax
+addr_828:
+    pop rbx
+    test rbx, rbx
+    jz addr_830
+addr_829:
+addr_829_0:
+    push str_10
+addr_829_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_829_2
+    jmp addr_50
+addr_829_2:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_829_3
+    jmp addr_453
+addr_829_3:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_829_4:
+addr_830:
+    mov qword rax, 8
+    push rax
+addr_831:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_832:
+    mov qword rax, 0
+    push rax
+addr_833:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_834:
+    pop rax
+addr_835:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_836:
+addr_837:
+    ; - proc tryfree 1 0
+addr_838:
+    mov qword rax, 17
+    push rax
+addr_839:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_840:
+    pop rax
+    push rax
+    push rax
+addr_841:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_842
+    jmp addr_521
+addr_842:
+    pop rax
+    xor rax, 1
+    push rax
+addr_843:
+    pop rbx
+    test rbx, rbx
+    jz addr_845
+addr_844:
+addr_844_0:
+    pop rax
+addr_844_1:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_844_2:
+addr_845:
+    mov qword rax, 8
+    push rax
+addr_846:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_847:
+    mov qword rax, 0
+    push rax
+addr_848:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_849:
+    pop rax
+addr_850:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_851:
+addr_852:
+    ; - proc realloc 2 1
+addr_853:
+    mov qword rax, 17
+    push rax
+addr_854:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_855:
+    pop rax
+    push rax
+    push rax
+addr_856:
+    mov qword rax, 128
+    push rax
+addr_857:
+    xor rdx, rdx
+    pop rbx
+    pop rax
+    idiv rbx
+    push rax
+    push rdx
+addr_858:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_859:
+    pop rax
+addr_860:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_861:
+    mov qword rax, 128
+    push rax
+addr_862:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_863:
+    push mem+76
+addr_864:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_865:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_866:
+    pop rax
+addr_867:
+    mov qword rax, 17
+    push rax
+addr_868:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_869:
+    pop rax
+    push rax
+    push rax
+addr_870:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_871
+    jmp addr_521
+addr_871:
+    pop rax
+    xor rax, 1
+    push rax
+addr_872:
+    pop rbx
+    test rbx, rbx
+    jz addr_874
+addr_873:
+addr_873_0:
+    push str_11
+addr_873_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_873_2
+    jmp addr_50
+addr_873_2:
+addr_874:
+    push mem+76
+addr_875:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_876:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_877:
+    mov qword rax, 9
+    push rax
+addr_878:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_879:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_880:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_881:
+    pop rbx
+    test rbx, rbx
+    jz addr_883
+addr_882:
+addr_882_0:
+    mov qword rax, 17
+    push rax
+addr_882_1:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_882_2:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_882_3:
+addr_883:
+    pop rax
+    push rax
+    push rax
+addr_884:
+    pop rax
+    push rax
+    push rax
+addr_885:
+    mov qword rax, 9
+    push rax
+addr_886:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_887:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_888:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_889:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_890:
+    mov qword rax, 9
+    push rax
+addr_891:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_892:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_893:
+    mov qword rax, 128
+    push rax
+addr_894:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_895:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_896:
+    mov qword rax, 128
+    push rax
+addr_897:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_898:
+addr_899:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_900:
+    mov qword rax, 128
+    push rax
+addr_901:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_902:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_903:
+    mov qword rax, 128
+    push rax
+addr_904:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_905:
+    pop rax
+    push rax
+    push rax
+addr_906:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_907
+    jmp addr_521
+addr_907:
+    pop rbx
+    test rbx, rbx
+    jz addr_909
+addr_908:
+addr_908_0:
+    pop rax
+addr_908_1:
+    pop rax
+addr_908_2:
+    pop rax
+    push rax
+    push rax
+addr_908_3:
+    mov qword rax, 17
+    push rax
+addr_908_4:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_908_5:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_908_6
+    jmp addr_823
+addr_908_6:
+    push mem+76
+addr_908_7:
+   pop rax
+   xor rbx, rbx
+   mov rbx, [rax]
+   push rbx
+addr_908_8:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_908_9
+    jmp addr_733
+addr_908_9:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_908_10:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_908_11:
+    mov qword rax, 17
+    push rax
+addr_908_12:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_908_13:
+    pop rax
+    push rax
+    push rax
+addr_908_14:
+    mov qword rax, 9
+    push rax
+addr_908_15:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_908_16:
+   pop rax
+   xor rbx, rbx
+   mov rbx, [rax]
+   push rbx
+addr_908_17:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_908_18
+    jmp addr_544
+addr_908_18:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_908_19:
+addr_909:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_910:
+    push mem+76
+addr_911:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_912:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_913:
+    pop rax
+    xor rax, 1
+    push rax
+addr_914:
+    pop rbx
+    test rbx, rbx
+    jz addr_915
+    jmp addr_898
+addr_915:
+    pop rax
+addr_916:
+    pop rax
+addr_917:
+    pop rax
+    push rax
+    push rax
+addr_918:
+    mov qword rax, 9
+    push rax
+addr_919:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_920:
+    push mem+76
+addr_921:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_922:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_923:
+    pop rax
+addr_924:
+    pop rax
+    push rax
+    push rax
+addr_925:
+    pop rax
+    push rax
+    push rax
+addr_926:
+    mov qword rax, 0
+    push rax
+addr_927:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_928:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_929:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_930:
+    pop rax
+addr_931:
+    pop rax
+    push rax
+    push rax
+addr_932:
+    mov qword rax, 8
+    push rax
+addr_933:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_934:
+    mov qword rax, 1
+    push rax
+addr_935:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_936:
+    pop rax
+addr_937:
+    mov qword rax, 17
+    push rax
+addr_938:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_939:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_940:
+addr_941:
+addr_942:
+addr_943:
+addr_944:
+addr_945:
+addr_946:
+addr_947:
+addr_948:
+addr_949:
+addr_950:
+addr_951:
+addr_952:
+addr_953:
+    ; - proc level 2 0
+addr_954:
+    push mem+101
+addr_955:
+    mov qword rax, 0
+    push rax
+addr_956:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_957:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_958:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_959:
+    pop rax
+addr_960:
+    push mem+101
+addr_961:
+    mov qword rax, 8
+    push rax
+addr_962:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_963:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_964:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_965:
+    pop rax
+addr_966:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_967:
+addr_968:
+    ; - proc msg 2 0
+addr_969:
+    push mem+101
+addr_970:
+    mov qword rax, 13
+    push rax
+addr_971:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_972:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_973
+    jmp addr_148
+addr_973:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_974:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_975
+    jmp addr_103
+addr_975:
+    pop rax
+addr_976:
+    pop rax
+addr_977:
+    push mem+101
+addr_978:
+    mov qword rax, 9
+    push rax
+addr_979:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_980:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_981:
+    mov qword rax, 3
+    push rax
+addr_982:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_983
+    jmp addr_544
+addr_983:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_984:
+addr_985:
+    ; - proc cat 1 0
+addr_986:
+    push mem+101
+addr_987:
+    mov qword rax, 13
+    push rax
+addr_988:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_989:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_990:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_991
+    jmp addr_169
+addr_991:
+    pop rax
+addr_992:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_993:
+addr_994:
+    ; - proc log 0 0
+addr_995:
+    push mem+101
+addr_996:
+    mov qword rax, 8
+    push rax
+addr_997:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_998:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_999:
+    pop rax
+    push rax
+    push rax
+addr_1000:
+    mov qword rax, 1
+    push rax
+addr_1001:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1002:
+    pop rbx
+    test rbx, rbx
+    jz addr_1004
+addr_1003:
+addr_1003_0:
+    push str_12
+addr_1003_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1003_2
+    jmp addr_32
+addr_1003_2:
+    push str_13
+addr_1003_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1003_4
+    jmp addr_32
+addr_1003_4:
+    push mem+101
+addr_1003_5:
+    mov qword rax, 9
+    push rax
+addr_1003_6:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1003_7:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1003_8
+    jmp addr_32
+addr_1003_8:
+    push str_14
+addr_1003_9:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1003_10
+    jmp addr_32
+addr_1003_10:
+    push mem+101
+addr_1003_11:
+    mov qword rax, 13
+    push rax
+addr_1003_12:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1003_13:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1003_14
+    jmp addr_32
+addr_1003_14:
+    push str_15
+addr_1003_15:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1003_16
+    jmp addr_50
+addr_1003_16:
+    pop rax
+addr_1003_17:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1003_18:
+addr_1004:
+    pop rax
+    push rax
+    push rax
+addr_1005:
+    mov qword rax, 2
+    push rax
+addr_1006:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1007:
+    pop rbx
+    test rbx, rbx
+    jz addr_1009
+addr_1008:
+addr_1008_0:
+    push str_16
+addr_1008_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1008_2
+    jmp addr_32
+addr_1008_2:
+    push str_17
+addr_1008_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1008_4
+    jmp addr_32
+addr_1008_4:
+    push mem+101
+addr_1008_5:
+    mov qword rax, 9
+    push rax
+addr_1008_6:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1008_7:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1008_8
+    jmp addr_32
+addr_1008_8:
+    push str_18
+addr_1008_9:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1008_10
+    jmp addr_32
+addr_1008_10:
+    push mem+101
+addr_1008_11:
+    mov qword rax, 13
+    push rax
+addr_1008_12:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1008_13:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1008_14
+    jmp addr_32
+addr_1008_14:
+    push str_19
+addr_1008_15:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1008_16
+    jmp addr_50
+addr_1008_16:
+    pop rax
+addr_1008_17:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1008_18:
+addr_1009:
+    pop rax
+    push rax
+    push rax
+addr_1010:
+    mov qword rax, 3
+    push rax
+addr_1011:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1012:
+    pop rbx
+    test rbx, rbx
+    jz addr_1014
+addr_1013:
+addr_1013_0:
+    push str_20
+addr_1013_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1013_2
+    jmp addr_32
+addr_1013_2:
+    push str_21
+addr_1013_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1013_4
+    jmp addr_32
+addr_1013_4:
+    push mem+101
+addr_1013_5:
+    mov qword rax, 9
+    push rax
+addr_1013_6:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1013_7:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1013_8
+    jmp addr_32
+addr_1013_8:
+    push str_22
+addr_1013_9:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1013_10
+    jmp addr_32
+addr_1013_10:
+    push mem+101
+addr_1013_11:
+    mov qword rax, 13
+    push rax
+addr_1013_12:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1013_13:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1013_14
+    jmp addr_32
+addr_1013_14:
+    push str_23
+addr_1013_15:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1013_16
+    jmp addr_50
+addr_1013_16:
+    pop rax
+addr_1013_17:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1013_18:
+addr_1014:
+    pop rax
+addr_1015:
+    push str_24
+addr_1016:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1017
+    jmp addr_32
+addr_1017:
+    push mem+101
+addr_1018:
+    mov qword rax, 9
+    push rax
+addr_1019:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1020:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1021
+    jmp addr_32
+addr_1021:
+    push str_25
+addr_1022:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1023
+    jmp addr_32
+addr_1023:
+    push mem+101
+addr_1024:
+    mov qword rax, 13
+    push rax
+addr_1025:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1026:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1027
+    jmp addr_50
+addr_1027:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1028:
+addr_1029:
+addr_1030:
+addr_1031:
+addr_1032:
+addr_1033:
+addr_1034:
+    ; - enum
+addr_1035:
+addr_1036:
+addr_1037:
+    ; - enum
+addr_1038:
+addr_1039:
+addr_1040:
+addr_1041:
+addr_1042:
+addr_1043:
+addr_1044:
+addr_1045:
+addr_1046:
+addr_1047:
+addr_1048:
+addr_1049:
+addr_1050:
+addr_1051:
+addr_1052:
+addr_1053:
+addr_1054:
+addr_1055:
+addr_1056:
+addr_1057:
+addr_1058:
+addr_1059:
+addr_1060:
+addr_1061:
+addr_1062:
+addr_1063:
+addr_1064:
+addr_1065:
+addr_1066:
+addr_1067:
+addr_1068:
+addr_1069:
+addr_1070:
+addr_1071:
+addr_1072:
+    ; - proc fork 0 1
+addr_1073:
+    mov qword rax, 57
+    push rax
+addr_1074:
+    pop rax
+    syscall
+    push rax
+addr_1075:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1076:
+addr_1077:
+    ; - proc deverr 0 0
+addr_1078:
+    push str_26
+addr_1079:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1080
+    jmp addr_50
+addr_1080:
+    mov qword rax, -1
+    push rax
+addr_1081:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1082:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1083:
+addr_1084:
+    ; - proc fexists 1 1
+addr_1085:
+    push mem+237
+addr_1086:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1087:
+    mov qword rax, 4
+    push rax
+addr_1088:
+    pop rax
+    pop rdi
+    pop rsi
+    syscall
+    push rax
+addr_1089:
+    mov qword rax, 0
+    push rax
+addr_1090:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1091:
+    pop rax
+    xor rax, 1
+    push rax
+addr_1092:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1093:
+addr_1094:
+    ; - proc execcmd 1 0
+addr_1095:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1096
+    jmp addr_1073
+addr_1096:
+    pop rax
+    push rax
+    push rax
+addr_1097:
+    mov qword rax, 0
+    push rax
+addr_1098:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1099:
+    pop rbx
+    test rbx, rbx
+    jz addr_1101
+addr_1100:
+addr_1100_0:
+    mov qword rax, 1
+    push rax
+addr_1100_1:
+    mov qword rax, 0
+    push rax
+addr_1100_2:
+    mov qword rax, 0
+    push rax
+addr_1100_3:
+    push str_27
+addr_1100_4:
+    mov qword rax, -100
+    push rax
+addr_1100_5:
+    mov qword rax, 257
+    push rax
+addr_1100_6:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    pop r10
+    syscall
+    push rax
+addr_1100_7:
+    pop rax
+    push rax
+    push rax
+addr_1100_8:
+    mov qword rax, 0
+    push rax
+addr_1100_9:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1100_10:
+    pop rbx
+    test rbx, rbx
+    jz addr_1100_12
+addr_1100_11:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1100_12
+    jmp addr_1078
+addr_1100_12:
+    mov qword rax, 33
+    push rax
+addr_1100_13:
+    pop rax
+    pop rdi
+    pop rsi
+    syscall
+    push rax
+addr_1100_14:
+    mov qword rax, 0
+    push rax
+addr_1100_15:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1100_16:
+    pop rbx
+    test rbx, rbx
+    jz addr_1100_18
+addr_1100_17:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1100_18
+    jmp addr_1078
+addr_1100_18:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1100_19:
+    mov rax, [args_ptr]
+    mov rax, [rax]
+    add rax, 2
+    shl rax, 3
+    mov rbx, [args_ptr]
+    add rbx, rax
+    push rbx
+addr_1100_20:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1100_21:
+    pop rax
+    push rax
+    push rax
+addr_1100_22:
+   pop rax
+   xor rbx, rbx
+   mov rbx, [rax]
+   push rbx
+addr_1100_23:
+    mov qword rax, 59
+    push rax
+addr_1100_24:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    syscall
+    push rax
+addr_1100_25:
+    pop rax
+addr_1100_26:
+    pop rax
+addr_1100_27:
+    pop rax
+addr_1100_28:
+    mov qword rax, -1
+    push rax
+addr_1100_29:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1100_30:
+addr_1101:
+    pop rax
+    push rax
+    push rax
+addr_1102:
+    mov qword rax, 0
+    push rax
+addr_1103:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_1104:
+    pop rbx
+    test rbx, rbx
+    jz addr_1106
+addr_1105:
+addr_1105_0:
+    mov qword rax, 0
+    push rax
+addr_1105_1:
+    mov qword rax, 0
+    push rax
+addr_1105_2:
+    push mem+229
+addr_1105_3:
+    mov qword rax, -1
+    push rax
+addr_1105_4:
+    mov qword rax, 61
+    push rax
+addr_1105_5:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    pop r10
+    syscall
+    push rax
+addr_1105_6:
+    mov qword rax, 0
+    push rax
+addr_1105_7:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1105_8:
+    pop rbx
+    test rbx, rbx
+    jz addr_1105_10
+addr_1105_9:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1105_10
+    jmp addr_1078
+addr_1105_10:
+    pop rax
+addr_1105_11:
+    pop rax
+addr_1105_12:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1105_13:
+addr_1106:
+    mov qword rax, 0
+    push rax
+addr_1107:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1108:
+    pop rbx
+    test rbx, rbx
+    jz addr_1110
+addr_1109:
+addr_1109_0:
+    push str_28
+addr_1109_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1109_2
+    jmp addr_50
+addr_1109_2:
+addr_1110:
+    pop rax
+addr_1111:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1112:
+addr_1113:
+    ; - proc execcmdloud 1 0
+addr_1114:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1115
+    jmp addr_1073
+addr_1115:
+    pop rax
+    push rax
+    push rax
+addr_1116:
+    mov qword rax, 0
+    push rax
+addr_1117:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1118:
+    pop rbx
+    test rbx, rbx
+    jz addr_1120
+addr_1119:
+addr_1119_0:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1119_1:
+    mov rax, [args_ptr]
+    mov rax, [rax]
+    add rax, 2
+    shl rax, 3
+    mov rbx, [args_ptr]
+    add rbx, rax
+    push rbx
+addr_1119_2:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1119_3:
+    pop rax
+    push rax
+    push rax
+addr_1119_4:
+   pop rax
+   xor rbx, rbx
+   mov rbx, [rax]
+   push rbx
+addr_1119_5:
+    mov qword rax, 59
+    push rax
+addr_1119_6:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    syscall
+    push rax
+addr_1119_7:
+    pop rax
+addr_1119_8:
+    pop rax
+addr_1119_9:
+    pop rax
+addr_1119_10:
+    mov qword rax, -1
+    push rax
+addr_1119_11:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1119_12:
+addr_1120:
+    pop rax
+    push rax
+    push rax
+addr_1121:
+    mov qword rax, 0
+    push rax
+addr_1122:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovg rcx, rdx
+    push rcx
+addr_1123:
+    pop rbx
+    test rbx, rbx
+    jz addr_1125
+addr_1124:
+addr_1124_0:
+    mov qword rax, 0
+    push rax
+addr_1124_1:
+    mov qword rax, 0
+    push rax
+addr_1124_2:
+    push mem+229
+addr_1124_3:
+    mov qword rax, -1
+    push rax
+addr_1124_4:
+    mov qword rax, 61
+    push rax
+addr_1124_5:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    pop r10
+    syscall
+    push rax
+addr_1124_6:
+    mov qword rax, 0
+    push rax
+addr_1124_7:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1124_8:
+    pop rbx
+    test rbx, rbx
+    jz addr_1124_10
+addr_1124_9:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1124_10
+    jmp addr_1078
+addr_1124_10:
+    pop rax
+addr_1124_11:
+    pop rax
+addr_1124_12:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1124_13:
+addr_1125:
+    mov qword rax, 0
+    push rax
+addr_1126:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1127:
+    pop rbx
+    test rbx, rbx
+    jz addr_1129
+addr_1128:
+addr_1128_0:
+    push str_29
+addr_1128_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1128_2
+    jmp addr_50
+addr_1128_2:
+addr_1129:
+    pop rax
+addr_1130:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1131:
+addr_1132:
+    ; - proc execcmdecho 1 0
+addr_1133:
+    mov qword rax, 0
+    push rax
+addr_1134:
+    mov qword rax, 1
+    push rax
+addr_1135:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1136
+    jmp addr_954
+addr_1136:
+    push str_30
+addr_1137:
+    push str_31
+addr_1138:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1139
+    jmp addr_969
+addr_1139:
+    pop rax
+    push rax
+    push rax
+addr_1140:
+addr_1141:
+    pop rax
+    push rax
+    push rax
+addr_1142:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1143:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1144
+    jmp addr_986
+addr_1144:
+    mov qword rax, 8
+    push rax
+addr_1145:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1146:
+    pop rax
+    push rax
+    push rax
+addr_1147:
+    pop rbx
+    test rbx, rbx
+    jz addr_1149
+addr_1148:
+addr_1148_0:
+    push str_32
+addr_1148_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1148_2
+    jmp addr_986
+addr_1148_2:
+addr_1149:
+    pop rax
+    push rax
+    push rax
+addr_1150:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1151:
+    mov qword rax, 0
+    push rax
+addr_1152:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_1153:
+    pop rbx
+    test rbx, rbx
+    jz addr_1154
+    jmp addr_1140
+addr_1154:
+    pop rax
+addr_1155:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1156
+    jmp addr_995
+addr_1156:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1157
+    jmp addr_1095
+addr_1157:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1158:
+addr_1159:
+    ; - proc execcmdecholoud 1 0
+addr_1160:
+    mov qword rax, 0
+    push rax
+addr_1161:
+    mov qword rax, 1
+    push rax
+addr_1162:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1163
+    jmp addr_954
+addr_1163:
+    push str_33
+addr_1164:
+    push str_34
+addr_1165:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1166
+    jmp addr_969
+addr_1166:
+    pop rax
+    push rax
+    push rax
+addr_1167:
+addr_1168:
+    pop rax
+    push rax
+    push rax
+addr_1169:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1170:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1171
+    jmp addr_986
+addr_1171:
+    mov qword rax, 8
+    push rax
+addr_1172:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1173:
+    pop rax
+    push rax
+    push rax
+addr_1174:
+    pop rbx
+    test rbx, rbx
+    jz addr_1176
+addr_1175:
+addr_1175_0:
+    push str_35
+addr_1175_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1175_2
+    jmp addr_986
+addr_1175_2:
+addr_1176:
+    pop rax
+    push rax
+    push rax
+addr_1177:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1178:
+    mov qword rax, 0
+    push rax
+addr_1179:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_1180:
+    pop rbx
+    test rbx, rbx
+    jz addr_1181
+    jmp addr_1167
+addr_1181:
+    pop rax
+addr_1182:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1183
+    jmp addr_995
+addr_1183:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1184
+    jmp addr_1114
+addr_1184:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1185:
+addr_1186:
+    ; - proc args 1 1
+addr_1187:
+    pop rax
+    push rax
+    push rax
+addr_1188:
+    mov rax, [args_ptr]
+    mov rax, [rax]
+    push rax
+addr_1189:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_1190:
+    mov qword rax, 0
+    push rax
+addr_1191:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1192:
+    pop rax
+    xor rax, 1
+    push rax
+addr_1193:
+    pop rbx
+    test rbx, rbx
+    jz addr_1195
+addr_1194:
+addr_1194_0:
+    pop rax
+    push rax
+    push rax
+addr_1194_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1194_2
+    jmp addr_443
+addr_1194_2:
+    push str_36
+addr_1194_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1194_4
+    jmp addr_443
+addr_1194_4:
+    pop rax
+addr_1194_5:
+    mov qword rax, -1
+    push rax
+addr_1194_6:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1194_7:
+addr_1195:
+    mov qword rax, 8
+    push rax
+addr_1196:
+    pop rax
+    pop rbx
+    imul rax, rbx
+    push rax
+addr_1197:
+    mov rax, [args_ptr]
+    add rax, 8
+    push rax
+addr_1198:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1199:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1200:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1201:
+addr_1202:
+    ; - proc env 1 1
+addr_1203:
+    push mem+381
+addr_1204:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1205:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1206:
+    pop rax
+addr_1207:
+    mov rax, [args_ptr]
+    mov rax, [rax]
+    add rax, 2
+    shl rax, 3
+    mov rbx, [args_ptr]
+    add rbx, rax
+    push rbx
+addr_1208:
+addr_1209:
+    pop rax
+    push rax
+    push rax
+addr_1210:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1211:
+    mov qword rax, 61
+    push rax
+addr_1212:
+    push mem+389
+addr_1213:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1214
+    jmp addr_317
+addr_1214:
+    push mem+381
+addr_1215:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1216:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1217
+    jmp addr_55
+addr_1217:
+    pop rbx
+    test rbx, rbx
+    jz addr_1219
+addr_1218:
+addr_1218_0:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1218_1:
+    pop rax
+addr_1218_2:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1218_3:
+addr_1219:
+    pop rax
+addr_1220:
+    mov qword rax, 8
+    push rax
+addr_1221:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1222:
+    pop rax
+    push rax
+    push rax
+addr_1223:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1224:
+    mov qword rax, 0
+    push rax
+addr_1225:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_1226:
+    pop rbx
+    test rbx, rbx
+    jz addr_1227
+    jmp addr_1208
+addr_1227:
+    pop rax
+addr_1228:
+    mov qword rax, 0
+    push rax
+addr_1229:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1230:
+addr_1231:
+    ; - proc open 4 1
+addr_1232:
+    mov qword rax, 257
+    push rax
+addr_1233:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    pop r10
+    syscall
+    push rax
+addr_1234:
+    pop rax
+    push rax
+    push rax
+addr_1235:
+    mov qword rax, 0
+    push rax
+addr_1236:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1237:
+    pop rbx
+    test rbx, rbx
+    jz addr_1239
+addr_1238:
+addr_1238_0:
+    push str_37
+addr_1238_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1238_2
+    jmp addr_50
+addr_1238_2:
+    pop rax
+addr_1238_3:
+    mov qword rax, -1
+    push rax
+addr_1238_4:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1238_5:
+addr_1239:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1240:
+addr_1241:
+    ; - proc write 3 0
+addr_1242:
+    mov qword rax, 1
+    push rax
+addr_1243:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    syscall
+    push rax
+addr_1244:
+    mov qword rax, 0
+    push rax
+addr_1245:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1246:
+    pop rbx
+    test rbx, rbx
+    jz addr_1248
+addr_1247:
+addr_1247_0:
+    push str_38
+addr_1247_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1247_2
+    jmp addr_50
+addr_1247_2:
+    mov qword rax, -1
+    push rax
+addr_1247_3:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1247_4:
+addr_1248:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1249:
+addr_1250:
+    ; - proc read 3 1
+addr_1251:
+    mov qword rax, 0
+    push rax
+addr_1252:
+    pop rax
+    pop rdi
+    pop rsi
+    pop rdx
+    syscall
+    push rax
+addr_1253:
+    pop rax
+    push rax
+    push rax
+addr_1254:
+    mov qword rax, 0
+    push rax
+addr_1255:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1256:
+    pop rbx
+    test rbx, rbx
+    jz addr_1258
+addr_1257:
+addr_1257_0:
+    push str_39
+addr_1257_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1257_2
+    jmp addr_50
+addr_1257_2:
+    pop rax
+addr_1257_3:
+    mov qword rax, -1
+    push rax
+addr_1257_4:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1257_5:
+addr_1258:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1259:
+addr_1260:
+    ; - proc close 1 0
+addr_1261:
+    mov qword rax, 3
+    push rax
+addr_1262:
+    pop rax
+    pop rdi
+    syscall
+    push rax
+addr_1263:
+    mov qword rax, 0
+    push rax
+addr_1264:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovl rcx, rdx
+    push rcx
+addr_1265:
+    pop rbx
+    test rbx, rbx
+    jz addr_1267
+addr_1266:
+addr_1266_0:
+    push str_40
+addr_1266_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1266_2
+    jmp addr_50
+addr_1266_2:
+    mov qword rax, -1
+    push rax
+addr_1266_3:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1266_4:
+addr_1267:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1268:
+addr_1269:
+addr_1270:
+    ; - proc version 0 1
+addr_1271:
+    push str_41
+addr_1272:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1273:
+addr_1274:
+    ; - enum
+addr_1275:
+addr_1276:
+addr_1277:
+addr_1278:
+addr_1279:
+addr_1280:
+addr_1281:
+addr_1282:
+addr_1283:
+addr_1284:
+addr_1285:
+addr_1286:
+addr_1287:
+addr_1288:
+addr_1289:
+    ; - proc inner 1 1
+addr_1290:
+    mov qword rax, 1
+    push rax
+addr_1291:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1292:
+    pop rax
+    push rax
+    push rax
+addr_1293:
+    pop rax
+    push rax
+    push rax
+addr_1294:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1295
+    jmp addr_12
+addr_1295:
+    mov qword rax, 1
+    push rax
+addr_1296:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_1297:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1298:
+    mov qword rax, 0
+    push rax
+addr_1299:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_1300:
+    pop rax
+addr_1301:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1302:
+addr_1303:
+    ; - proc pushstack 1 0
+addr_1304:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1305
+    jmp addr_1290
+addr_1305:
+    pop rax
+    push rax
+    push rax
+addr_1306:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1307
+    jmp addr_12
+addr_1307:
+    mov qword rax, 1
+    push rax
+addr_1308:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1309:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1310
+    jmp addr_810
+addr_1310:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1311:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1312
+    jmp addr_103
+addr_1312:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1313
+    jmp addr_12
+addr_1313:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1314:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1315:
+    mov qword rax, 1
+    push rax
+addr_1316:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1317:
+    mov qword rax, 0
+    push rax
+addr_1318:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_1319:
+    pop rax
+addr_1320:
+    push mem+2902
+addr_1321:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1322:
+    push mem+2910
+addr_1323:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1324:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1325:
+    pop rax
+    push rax
+    push rax
+addr_1326:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1327:
+    mov qword rax, 0
+    push rax
+addr_1328:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_1329:
+    pop rbx
+    test rbx, rbx
+    jz addr_1331
+addr_1330:
+addr_1330_0:
+    pop rax
+    push rax
+    push rax
+addr_1330_1:
+   pop rax
+   xor rbx, rbx
+   mov rbx, [rax]
+   push rbx
+addr_1330_2:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1330_3
+    jmp addr_823
+addr_1330_3:
+addr_1331:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1332:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1333:
+    pop rax
+addr_1334:
+    push mem+2910
+addr_1335:
+    pop rax
+    push rax
+    push rax
+addr_1336:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1337:
+    mov qword rax, 8
+    push rax
+addr_1338:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1339:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1340:
+    pop rax
+addr_1341:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1342:
+addr_1343:
+    ; - proc popstack 0 1
+addr_1344:
+    push mem+2910
+addr_1345:
+    pop rax
+    push rax
+    push rax
+addr_1346:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1347:
+    mov qword rax, 8
+    push rax
+addr_1348:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_1349:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1350:
+    pop rax
+addr_1351:
+    push mem+2902
+addr_1352:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1353:
+    push mem+2910
+addr_1354:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1355:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1356:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1357:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1358:
+addr_1359:
+    ; - proc help 1 0
+addr_1360:
+    pop rax
+    push rax
+    push rax
+addr_1361:
+    mov qword rax, 0
+    push rax
+addr_1362:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1363:
+    pop rbx
+    test rbx, rbx
+    jz addr_1365
+addr_1364:
+addr_1364_0:
+    push str_42
+addr_1364_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1364_2
+    jmp addr_32
+addr_1364_2:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1364_3
+    jmp addr_1271
+addr_1364_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1364_4
+    jmp addr_50
+addr_1364_4:
+    pop rax
+addr_1364_5:
+    mov qword rax, 0
+    push rax
+addr_1364_6:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1364_7:
+addr_1365:
+    pop rax
+    push rax
+    push rax
+addr_1366:
+    mov qword rax, 1
+    push rax
+addr_1367:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1368:
+    pop rbx
+    test rbx, rbx
+    jz addr_1370
+addr_1369:
+addr_1369_0:
+    push str_43
+addr_1369_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1369_2
+    jmp addr_50
+addr_1369_2:
+addr_1370:
+    pop rax
+    push rax
+    push rax
+addr_1371:
+    mov qword rax, 2
+    push rax
+addr_1372:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1373:
+    pop rbx
+    test rbx, rbx
+    jz addr_1375
+addr_1374:
+addr_1374_0:
+    push str_44
+addr_1374_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1374_2
+    jmp addr_32
+addr_1374_2:
+    mov qword rax, 1
+    push rax
+addr_1374_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1374_4
+    jmp addr_1187
+addr_1374_4:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1374_5
+    jmp addr_32
+addr_1374_5:
+    push str_45
+addr_1374_6:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1374_7
+    jmp addr_50
+addr_1374_7:
+addr_1375:
+    pop rax
+    push rax
+    push rax
+addr_1376:
+    mov qword rax, 3
+    push rax
+addr_1377:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1378:
+    pop rbx
+    test rbx, rbx
+    jz addr_1380
+addr_1379:
+addr_1379_0:
+    push str_46
+addr_1379_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1379_2
+    jmp addr_50
+addr_1379_2:
+addr_1380:
+    pop rax
+addr_1381:
+    push str_47
+addr_1382:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1383
+    jmp addr_32
+addr_1383:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1384
+    jmp addr_1271
+addr_1384:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1385
+    jmp addr_32
+addr_1385:
+    push str_48
+addr_1386:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1387
+    jmp addr_50
+addr_1387:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1388
+    jmp addr_42
+addr_1388:
+    push str_49
+addr_1389:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1390
+    jmp addr_50
+addr_1390:
+    push str_50
+addr_1391:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1392
+    jmp addr_50
+addr_1392:
+    push str_51
+addr_1393:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1394
+    jmp addr_50
+addr_1394:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1395
+    jmp addr_42
+addr_1395:
+    mov qword rax, 1
+    push rax
+addr_1396:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1397:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1398:
+addr_1399:
+    ; - proc openinput 1 0
+addr_1400:
+    mov qword rax, 0
+    push rax
+addr_1401:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1402:
+    mov qword rax, 0
+    push rax
+addr_1403:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1404:
+    mov qword rax, 0
+    push rax
+addr_1405:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1406:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_1407:
+    mov qword rax, 47
+    push rax
+addr_1408:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_1409:
+    pop rbx
+    test rbx, rbx
+    jz addr_1411
+addr_1410:
+addr_1410_0:
+    pop rax
+addr_1410_1:
+    mov qword rax, -100
+    push rax
+addr_1410_2:
+addr_1411:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1412
+    jmp addr_1232
+addr_1412:
+    push mem+1861
+addr_1413:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1414:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1415:
+    pop rax
+addr_1416:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1417:
+addr_1418:
+    ; - proc clonerepo 0 0
+addr_1419:
+    push mem+453
+addr_1420:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1421
+    jmp addr_1133
+addr_1421:
+    push mem+517
+addr_1422:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1423
+    jmp addr_148
+addr_1423:
+    push str_52
+addr_1424:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1425
+    jmp addr_103
+addr_1425:
+    pop rax
+addr_1426:
+    mov qword rax, 2
+    push rax
+addr_1427:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1428
+    jmp addr_1187
+addr_1428:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1429
+    jmp addr_169
+addr_1429:
+    pop rax
+addr_1430:
+    push mem+581
+addr_1431:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1432
+    jmp addr_148
+addr_1432:
+    push mem+837
+addr_1433:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1434
+    jmp addr_103
+addr_1434:
+    pop rax
+addr_1435:
+    mov qword rax, 2
+    push rax
+addr_1436:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1437
+    jmp addr_1187
+addr_1437:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1438
+    jmp addr_169
+addr_1438:
+    pop rax
+addr_1439:
+    push mem+453
+addr_1440:
+    push str_53
+addr_1441:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1442:
+    mov qword rax, 8
+    push rax
+addr_1443:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1444:
+    push str_54
+addr_1445:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1446:
+    mov qword rax, 8
+    push rax
+addr_1447:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1448:
+    push mem+517
+addr_1449:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1450:
+    mov qword rax, 8
+    push rax
+addr_1451:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1452:
+    push mem+581
+addr_1453:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1454:
+    mov qword rax, 8
+    push rax
+addr_1455:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1456:
+    mov qword rax, 0
+    push rax
+addr_1457:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1458:
+    pop rax
+addr_1459:
+    push mem+453
+addr_1460:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1461
+    jmp addr_1133
+addr_1461:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1462:
+addr_1463:
+    ; - proc pullrepo 0 0
+addr_1464:
+    push mem+453
+addr_1465:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1466
+    jmp addr_1133
+addr_1466:
+    push mem+581
+addr_1467:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1468
+    jmp addr_148
+addr_1468:
+    push mem+837
+addr_1469:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1470
+    jmp addr_103
+addr_1470:
+    pop rax
+addr_1471:
+    mov qword rax, 2
+    push rax
+addr_1472:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1473
+    jmp addr_1187
+addr_1473:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1474
+    jmp addr_169
+addr_1474:
+    pop rax
+addr_1475:
+    push mem+453
+addr_1476:
+    push str_55
+addr_1477:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1478:
+    mov qword rax, 8
+    push rax
+addr_1479:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1480:
+    push str_56
+addr_1481:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1482:
+    mov qword rax, 8
+    push rax
+addr_1483:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1484:
+    push mem+581
+addr_1485:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1486:
+    mov qword rax, 8
+    push rax
+addr_1487:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1488:
+    push str_57
+addr_1489:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1490:
+    mov qword rax, 8
+    push rax
+addr_1491:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1492:
+    push str_58
+addr_1493:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1494:
+    mov qword rax, 8
+    push rax
+addr_1495:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1496:
+    mov qword rax, 0
+    push rax
+addr_1497:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1498:
+    pop rax
+addr_1499:
+    push mem+453
+addr_1500:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1501
+    jmp addr_1133
+addr_1501:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1502:
+addr_1503:
+    ; - proc setsrc 0 0
+addr_1504:
+    push mem+1093
+addr_1505:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1506
+    jmp addr_148
+addr_1506:
+    push mem+837
+addr_1507:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1508
+    jmp addr_103
+addr_1508:
+    pop rax
+addr_1509:
+    push str_59
+addr_1510:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1511
+    jmp addr_169
+addr_1511:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1512
+    jmp addr_1344
+addr_1512:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1513
+    jmp addr_169
+addr_1513:
+    push str_60
+addr_1514:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1515
+    jmp addr_169
+addr_1515:
+    pop rax
+addr_1516:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1517:
+addr_1518:
+    ; - proc addbin 0 0
+addr_1519:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1520
+    jmp addr_1344
+addr_1520:
+    push mem+581
+addr_1521:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1522
+    jmp addr_148
+addr_1522:
+    push mem+1093
+addr_1523:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1524
+    jmp addr_103
+addr_1524:
+    pop rax
+addr_1525:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1526:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1527
+    jmp addr_169
+addr_1527:
+    push str_61
+addr_1528:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1529
+    jmp addr_169
+addr_1529:
+    pop rax
+addr_1530:
+    push mem+1349
+addr_1531:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1532
+    jmp addr_148
+addr_1532:
+    push mem+1605
+addr_1533:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1534
+    jmp addr_103
+addr_1534:
+    pop rax
+addr_1535:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1536:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1537
+    jmp addr_169
+addr_1537:
+    pop rax
+addr_1538:
+    push mem+453
+addr_1539:
+    push str_62
+addr_1540:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1541:
+    mov qword rax, 8
+    push rax
+addr_1542:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1543:
+    push str_63
+addr_1544:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1545:
+    mov qword rax, 8
+    push rax
+addr_1546:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1547:
+    push mem+1349
+addr_1548:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1549:
+    mov qword rax, 8
+    push rax
+addr_1550:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1551:
+    push mem+581
+addr_1552:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1553:
+    mov qword rax, 8
+    push rax
+addr_1554:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1555:
+    mov qword rax, 0
+    push rax
+addr_1556:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1557:
+    pop rax
+addr_1558:
+    push mem+453
+addr_1559:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1560
+    jmp addr_1133
+addr_1560:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1561:
+addr_1562:
+    ; - proc addlibd 0 0
+addr_1563:
+    push mem+1349
+addr_1564:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1565
+    jmp addr_148
+addr_1565:
+    push mem+1093
+addr_1566:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1567
+    jmp addr_103
+addr_1567:
+    pop rax
+addr_1568:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1569
+    jmp addr_1344
+addr_1569:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1570
+    jmp addr_169
+addr_1570:
+    pop rax
+addr_1571:
+    push mem+581
+addr_1572:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1573
+    jmp addr_148
+addr_1573:
+    push str_64
+addr_1574:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1575
+    jmp addr_1203
+addr_1575:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1576
+    jmp addr_103
+addr_1576:
+    pop rax
+addr_1577:
+    push str_65
+addr_1578:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1579
+    jmp addr_169
+addr_1579:
+    pop rax
+addr_1580:
+    push mem+453
+addr_1581:
+    push str_66
+addr_1582:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1583:
+    mov qword rax, 8
+    push rax
+addr_1584:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1585:
+    push str_67
+addr_1586:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1587:
+    mov qword rax, 8
+    push rax
+addr_1588:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1589:
+    push mem+1349
+addr_1590:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1591:
+    mov qword rax, 8
+    push rax
+addr_1592:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1593:
+    push mem+581
+addr_1594:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1595:
+    mov qword rax, 8
+    push rax
+addr_1596:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1597:
+    mov qword rax, 0
+    push rax
+addr_1598:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1599:
+    pop rax
+addr_1600:
+    push mem+453
+addr_1601:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1602
+    jmp addr_1133
+addr_1602:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1603:
+addr_1604:
+    ; - proc addlib 0 0
+addr_1605:
+    push mem+1349
+addr_1606:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1607
+    jmp addr_148
+addr_1607:
+    push mem+1093
+addr_1608:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1609
+    jmp addr_103
+addr_1609:
+    pop rax
+addr_1610:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1611
+    jmp addr_1344
+addr_1611:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1612
+    jmp addr_169
+addr_1612:
+    pop rax
+addr_1613:
+    push mem+581
+addr_1614:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1615
+    jmp addr_148
+addr_1615:
+    push str_68
+addr_1616:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1617
+    jmp addr_1203
+addr_1617:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1618
+    jmp addr_103
+addr_1618:
+    pop rax
+addr_1619:
+    push str_69
+addr_1620:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1621
+    jmp addr_169
+addr_1621:
+    pop rax
+addr_1622:
+    push mem+453
+addr_1623:
+    push str_70
+addr_1624:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1625:
+    mov qword rax, 8
+    push rax
+addr_1626:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1627:
+    push mem+1349
+addr_1628:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1629:
+    mov qword rax, 8
+    push rax
+addr_1630:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1631:
+    push mem+581
+addr_1632:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1633:
+    mov qword rax, 8
+    push rax
+addr_1634:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1635:
+    mov qword rax, 0
+    push rax
+addr_1636:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1637:
+    mov qword rax, 8
+    push rax
+addr_1638:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1639:
+    pop rax
+addr_1640:
+    push mem+453
+addr_1641:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1642
+    jmp addr_1133
+addr_1642:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1643:
+addr_1644:
+    ; - proc parsecmd 0 0
+addr_1645:
+    push mem+1877
+addr_1646:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_1647:
+    mov qword rax, 34
+    push rax
+addr_1648:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1649:
+    push mem+1877
+addr_1650:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1651
+    jmp addr_132
+addr_1651:
+    mov qword rax, 34
+    push rax
+addr_1652:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1653:
+    pop rbx
+    pop rax
+    and rax, rbx
+    push rax
+addr_1654:
+    pop rbx
+    test rbx, rbx
+    jz addr_1656
+addr_1655:
+addr_1655_0:
+    push mem+1877
+addr_1655_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1655_2
+    jmp addr_1304
+addr_1655_2:
+    push mem+1877
+addr_1655_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1655_4
+    jmp addr_148
+addr_1655_4:
+    pop rax
+addr_1655_5:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1655_6:
+addr_1656:
+    push mem+1877
+addr_1657:
+    pop rax
+    push rax
+    push rax
+addr_1658:
+    push str_71
+addr_1659:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1660
+    jmp addr_55
+addr_1660:
+    pop rbx
+    test rbx, rbx
+    jz addr_1662
+addr_1661:
+addr_1661_0:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1661_1
+    jmp addr_1504
+addr_1661_1:
+    pop rax
+addr_1661_2:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1661_3:
+addr_1662:
+    pop rax
+    push rax
+    push rax
+addr_1663:
+    push str_72
+addr_1664:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1665
+    jmp addr_55
+addr_1665:
+    pop rbx
+    test rbx, rbx
+    jz addr_1667
+addr_1666:
+addr_1666_0:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1666_1
+    jmp addr_1519
+addr_1666_1:
+    pop rax
+addr_1666_2:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1666_3:
+addr_1667:
+    pop rax
+    push rax
+    push rax
+addr_1668:
+    push str_73
+addr_1669:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1670
+    jmp addr_55
+addr_1670:
+    pop rbx
+    test rbx, rbx
+    jz addr_1672
+addr_1671:
+addr_1671_0:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1671_1
+    jmp addr_1605
+addr_1671_1:
+    pop rax
+addr_1671_2:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1671_3:
+addr_1672:
+    pop rax
+    push rax
+    push rax
+addr_1673:
+    push str_74
+addr_1674:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1675
+    jmp addr_55
+addr_1675:
+    pop rbx
+    test rbx, rbx
+    jz addr_1677
+addr_1676:
+addr_1676_0:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1676_1
+    jmp addr_1563
+addr_1676_1:
+    pop rax
+addr_1676_2:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1676_3:
+addr_1677:
+    pop rax
+addr_1678:
+    mov qword rax, 2
+    push rax
+addr_1679:
+    mov qword rax, 0
+    push rax
+addr_1680:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1681
+    jmp addr_954
+addr_1681:
+    push str_75
+addr_1682:
+    push str_76
+addr_1683:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1684
+    jmp addr_969
+addr_1684:
+    push mem+1877
+addr_1685:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1686
+    jmp addr_986
+addr_1686:
+    push str_77
+addr_1687:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1688
+    jmp addr_986
+addr_1688:
+    mov qword rax, 255
+    push rax
+addr_1689:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_1690:
+addr_1691:
+    ; - proc checkcmd 0 1
+addr_1692:
+    push mem+1877
+addr_1693:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_1694:
+    mov qword rax, 34
+    push rax
+addr_1695:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1696:
+    push mem+1877
+addr_1697:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1698
+    jmp addr_132
+addr_1698:
+    mov qword rax, 34
+    push rax
+addr_1699:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_1700:
+    pop rbx
+    pop rax
+    and rax, rbx
+    push rax
+addr_1701:
+    push mem+1877
+addr_1702:
+    push str_78
+addr_1703:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1704
+    jmp addr_55
+addr_1704:
+    pop rbx
+    pop rax
+    or rax, rbx
+    push rax
+addr_1705:
+    pop rax
+    xor rax, 1
+    push rax
+addr_1706:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1707:
+addr_1708:
+    ; - proc checkbuffer 2 2
+addr_1709:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1710
+    jmp addr_1692
+addr_1710:
+    pop rbx
+    test rbx, rbx
+    jz addr_1712
+addr_1711:
+addr_1711_0:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1711_1
+    jmp addr_1645
+addr_1711_1:
+    pop rax
+addr_1711_2:
+    pop rax
+addr_1711_3:
+    push mem+1877
+addr_1711_4:
+    mov qword rax, 0
+    push rax
+addr_1711_5:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1711_6:
+addr_1712:
+    pop rax
+addr_1713:
+    mov qword rax, 32
+    push rax
+addr_1714:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1715:
+addr_1716:
+    ; - proc parsefile 0 0
+addr_1717:
+    push mem+2902
+addr_1718:
+    mov qword rax, 1024
+    push rax
+addr_1719:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1720
+    jmp addr_810
+addr_1720:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1721:
+    pop rax
+addr_1722:
+    push mem+1861
+addr_1723:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1724:
+    mov qword rax, 0
+    push rax
+addr_1725:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1726:
+    pop rbx
+    test rbx, rbx
+    jz addr_1728
+addr_1727:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1728:
+    mov qword rax, 1024
+    push rax
+addr_1729:
+    mov qword rax, 1024
+    push rax
+addr_1730:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1731
+    jmp addr_810
+addr_1731:
+    push mem+1869
+addr_1732:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1733:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1734:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1735:
+    push mem+1861
+addr_1736:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1737:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1738
+    jmp addr_1251
+addr_1738:
+    pop rax
+addr_1739:
+    push mem+1861
+addr_1740:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1741:
+    mov qword rax, 74
+    push rax
+addr_1742:
+    pop rax
+    pop rdi
+    syscall
+    push rax
+addr_1743:
+    pop rax
+addr_1744:
+addr_1745:
+    push mem+1869
+addr_1746:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1747:
+    pop rax
+    push rax
+    push rax
+addr_1748:
+    push mem+1877
+addr_1749:
+addr_1750:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1751:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_1752:
+    pop rax
+    push rax
+    push rax
+addr_1753:
+    mov qword rax, 9
+    push rax
+addr_1754:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1755:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1756:
+    mov qword rax, 10
+    push rax
+addr_1757:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1758:
+    pop rbx
+    pop rax
+    or rax, rbx
+    push rax
+addr_1759:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1760:
+    mov qword rax, 13
+    push rax
+addr_1761:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1762:
+    pop rbx
+    pop rax
+    or rax, rbx
+    push rax
+addr_1763:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1764:
+    mov qword rax, 32
+    push rax
+addr_1765:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_1766:
+    pop rbx
+    pop rax
+    or rax, rbx
+    push rax
+addr_1767:
+    pop rbx
+    test rbx, rbx
+    jz addr_1769
+addr_1768:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1769
+    jmp addr_1709
+addr_1769:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1770:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1771:
+    pop rbx
+    pop rax
+    mov byte [rax], bl
+    push rax
+addr_1772:
+    pop rax
+addr_1773:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1774:
+    mov qword rax, 1
+    push rax
+addr_1775:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1776:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1777:
+    pop rax
+    push rax
+    push rax
+addr_1778:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_1779:
+    mov qword rax, 0
+    push rax
+addr_1780:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_1781:
+    pop rbx
+    test rbx, rbx
+    jz addr_1783
+addr_1782:
+addr_1782_0:
+    mov qword rax, 1
+    push rax
+addr_1782_1:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1782_2:
+addr_1783:
+    pop rax
+    pop rbx
+    push rbx
+    push rax
+    push rbx
+addr_1784:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_1785:
+    mov qword rax, 0
+    push rax
+addr_1786:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_1787:
+    pop rbx
+    test rbx, rbx
+    jz addr_1788
+    jmp addr_1749
+addr_1788:
+    pop rax
+addr_1789:
+    pop rax
+addr_1790:
+    push mem+1869
+addr_1791:
+    pop rax
+    pop rbx
+    push rax
+    push rbx
+addr_1792:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1793:
+    pop rax
+addr_1794:
+    push mem+1869
+addr_1795:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1796:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1797
+    jmp addr_148
+addr_1797:
+    push mem+1877
+addr_1798:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1799
+    jmp addr_103
+addr_1799:
+    pop rax
+addr_1800:
+    pop rax
+addr_1801:
+    mov qword rax, 1024
+    push rax
+addr_1802:
+    push mem+1877
+addr_1803:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1804
+    jmp addr_12
+addr_1804:
+    pop rbx
+    pop rax
+    sub rax, rbx
+    push rax
+addr_1805:
+    push mem+1869
+addr_1806:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1807:
+    push mem+1877
+addr_1808:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1809
+    jmp addr_12
+addr_1809:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1810:
+    push mem+1861
+addr_1811:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1812:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1813
+    jmp addr_1251
+addr_1813:
+    pop rax
+    push rax
+    push rax
+addr_1814:
+    push mem+1869
+addr_1815:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1816:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1817:
+    push mem+1877
+addr_1818:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1819
+    jmp addr_12
+addr_1819:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1820:
+    mov qword rax, 1
+    push rax
+addr_1821:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1822:
+    pop rax
+    push rax
+    push rax
+addr_1823:
+    pop rax
+    xor rbx, rbx
+    mov bl, [rax]
+    push rbx
+addr_1824:
+    mov qword rax, 0
+    push rax
+addr_1825:
+    mov rcx, 0
+    mov rdx, 1
+    pop rbx
+    pop rax
+    cmp rax, rbx
+    cmovne rcx, rdx
+    push rcx
+addr_1826:
+    pop rbx
+    test rbx, rbx
+    jz addr_1828
+addr_1827:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1828
+    jmp addr_148
+addr_1828:
+    pop rax
+addr_1829:
+    push mem+1877
+addr_1830:
+    mov qword rax, 1024
+    push rax
+addr_1831:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1832
+    jmp addr_614
+addr_1832:
+    pop rbx
+    test rbx, rbx
+    jz addr_1833
+    jmp addr_1744
+addr_1833:
+    push mem+1869
+addr_1834:
+    pop rax
+    xor rbx, rbx
+    mov rbx, [rax]
+    push rbx
+addr_1835:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1836
+    jmp addr_823
+addr_1836:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_1837:
+addr_1838:
+    ; - proc init 0 0
+addr_1839:
+    push mem+837
+addr_1840:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1841
+    jmp addr_148
+addr_1841:
+    push str_79
+addr_1842:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1843
+    jmp addr_1203
+addr_1843:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1844
+    jmp addr_103
+addr_1844:
+    pop rax
+addr_1845:
+    push str_80
+addr_1846:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1847
+    jmp addr_169
+addr_1847:
+    pop rax
+addr_1848:
+    push mem+1349
+addr_1849:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1850
+    jmp addr_148
+addr_1850:
+    push str_81
+addr_1851:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1852
+    jmp addr_1203
+addr_1852:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1853
+    jmp addr_103
+addr_1853:
+    pop rax
+addr_1854:
+    push str_82
+addr_1855:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1856
+    jmp addr_169
+addr_1856:
+    pop rax
+addr_1857:
+    push mem+1605
+addr_1858:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1859
+    jmp addr_148
+addr_1859:
+    push str_83
+addr_1860:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1861
+    jmp addr_1203
+addr_1861:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1862
+    jmp addr_103
+addr_1862:
+    pop rax
+addr_1863:
+    push str_84
+addr_1864:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1865
+    jmp addr_169
+addr_1865:
+    pop rax
+addr_1866:
+    push mem+453
+addr_1867:
+    push str_85
+addr_1868:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1869:
+    mov qword rax, 8
+    push rax
+addr_1870:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1871:
+    push str_86
+addr_1872:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1873:
+    mov qword rax, 8
+    push rax
+addr_1874:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1875:
+    push mem+837
+addr_1876:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1877:
+    mov qword rax, 8
+    push rax
+addr_1878:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1879:
+    push mem+1605
+addr_1880:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1881:
+    mov qword rax, 8
+    push rax
+addr_1882:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1883:
+    push mem+1349
+addr_1884:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1885:
+    mov qword rax, 8
+    push rax
+addr_1886:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1887:
+    mov qword rax, 0
+    push rax
+addr_1888:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1889:
+    pop rax
+addr_1890:
+    push mem+837
+addr_1891:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1892
+    jmp addr_148
+addr_1892:
+    push str_87
+addr_1893:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1894
+    jmp addr_1203
+addr_1894:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1895
+    jmp addr_103
+addr_1895:
+    pop rax
+addr_1896:
+    push str_88
+addr_1897:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1898
+    jmp addr_169
+addr_1898:
+    pop rax
+addr_1899:
+    push mem+581
+addr_1900:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1901
+    jmp addr_148
+addr_1901:
+    push mem+837
+addr_1902:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1903
+    jmp addr_103
+addr_1903:
+    pop rax
+addr_1904:
+    push str_89
+addr_1905:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1906
+    jmp addr_169
+addr_1906:
+    pop rax
+addr_1907:
+    push mem+453
+addr_1908:
+    push str_90
+addr_1909:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1910:
+    mov qword rax, 8
+    push rax
+addr_1911:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1912:
+    push str_91
+addr_1913:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1914:
+    mov qword rax, 8
+    push rax
+addr_1915:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1916:
+    push str_92
+addr_1917:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1918:
+    mov qword rax, 8
+    push rax
+addr_1919:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1920:
+    push mem+581
+addr_1921:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1922:
+    mov qword rax, 8
+    push rax
+addr_1923:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1924:
+    mov qword rax, 0
+    push rax
+addr_1925:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1926:
+    pop rax
+addr_1927:
+    push mem+453
+addr_1928:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1929
+    jmp addr_1133
+addr_1929:
+    push mem+453
+addr_1930:
+    mov qword rax, 0
+    push rax
+addr_1931:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1932
+    jmp addr_1187
+addr_1932:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1933:
+    mov qword rax, 8
+    push rax
+addr_1934:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1935:
+    push str_93
+addr_1936:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1937:
+    mov qword rax, 8
+    push rax
+addr_1938:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1939:
+    push str_94
+addr_1940:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1941:
+    mov qword rax, 8
+    push rax
+addr_1942:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1943:
+    mov qword rax, 0
+    push rax
+addr_1944:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1945:
+    pop rax
+addr_1946:
+    push mem+453
+addr_1947:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1948
+    jmp addr_1160
+addr_1948:
+    push mem+581
+addr_1949:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1950
+    jmp addr_148
+addr_1950:
+    push str_95
+addr_1951:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1952
+    jmp addr_1203
+addr_1952:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1953
+    jmp addr_103
+addr_1953:
+    pop rax
+addr_1954:
+    push str_96
+addr_1955:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1956
+    jmp addr_169
+addr_1956:
+    pop rax
+addr_1957:
+    push mem+1605
+addr_1958:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1959
+    jmp addr_148
+addr_1959:
+    push str_97
+addr_1960:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1961
+    jmp addr_1203
+addr_1961:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1962
+    jmp addr_103
+addr_1962:
+    pop rax
+addr_1963:
+    push str_98
+addr_1964:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1965
+    jmp addr_169
+addr_1965:
+    pop rax
+addr_1966:
+    push mem+1093
+addr_1967:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1968
+    jmp addr_148
+addr_1968:
+    push str_99
+addr_1969:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1970
+    jmp addr_1203
+addr_1970:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1971
+    jmp addr_103
+addr_1971:
+    pop rax
+addr_1972:
+    push str_100
+addr_1973:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_1974
+    jmp addr_169
+addr_1974:
+    pop rax
+addr_1975:
+    push mem+453
+addr_1976:
+    push mem+581
+addr_1977:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1978:
+    mov qword rax, 8
+    push rax
+addr_1979:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1980:
+    push str_101
+addr_1981:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1982:
+    mov qword rax, 8
+    push rax
+addr_1983:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1984:
+    push mem+1349
+addr_1985:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1986:
+    mov qword rax, 8
+    push rax
+addr_1987:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1988:
+    push str_102
+addr_1989:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1990:
+    mov qword rax, 8
+    push rax
+addr_1991:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1992:
+    push mem+1605
+addr_1993:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1994:
+    mov qword rax, 8
+    push rax
+addr_1995:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_1996:
+    push mem+1093
+addr_1997:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_1998:
+    mov qword rax, 8
+    push rax
+addr_1999:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2000:
+    mov qword rax, 0
+    push rax
+addr_2001:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2002:
+    pop rax
+addr_2003:
+    push mem+453
+addr_2004:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2005
+    jmp addr_1160
+addr_2005:
+    push mem+1093
+addr_2006:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2007
+    jmp addr_148
+addr_2007:
+    push str_103
+addr_2008:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2009
+    jmp addr_1203
+addr_2009:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2010
+    jmp addr_103
+addr_2010:
+    pop rax
+addr_2011:
+    push str_104
+addr_2012:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2013
+    jmp addr_169
+addr_2013:
+    pop rax
+addr_2014:
+    push mem+453
+addr_2015:
+    push str_105
+addr_2016:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2017:
+    mov qword rax, 8
+    push rax
+addr_2018:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2019:
+    push str_106
+addr_2020:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2021:
+    mov qword rax, 8
+    push rax
+addr_2022:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2023:
+    push mem+1093
+addr_2024:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2025:
+    mov qword rax, 8
+    push rax
+addr_2026:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2027:
+    mov qword rax, 0
+    push rax
+addr_2028:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2029:
+    pop rax
+addr_2030:
+    push mem+453
+addr_2031:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2032
+    jmp addr_1160
+addr_2032:
+    push mem+453
+addr_2033:
+    mov qword rax, 0
+    push rax
+addr_2034:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2035
+    jmp addr_1187
+addr_2035:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2036:
+    mov qword rax, 8
+    push rax
+addr_2037:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2038:
+    push str_107
+addr_2039:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2040:
+    mov qword rax, 8
+    push rax
+addr_2041:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2042:
+    push str_108
+addr_2043:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2044:
+    mov qword rax, 8
+    push rax
+addr_2045:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2046:
+    mov qword rax, 0
+    push rax
+addr_2047:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2048:
+    pop rax
+addr_2049:
+    push mem+453
+addr_2050:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2051
+    jmp addr_1160
+addr_2051:
+    push mem+453
+addr_2052:
+    mov qword rax, 0
+    push rax
+addr_2053:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2054
+    jmp addr_1187
+addr_2054:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2055:
+    mov qword rax, 8
+    push rax
+addr_2056:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2057:
+    push str_109
+addr_2058:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2059:
+    mov qword rax, 8
+    push rax
+addr_2060:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2061:
+    push str_110
+addr_2062:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2063:
+    mov qword rax, 8
+    push rax
+addr_2064:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2065:
+    mov qword rax, 0
+    push rax
+addr_2066:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2067:
+    pop rax
+addr_2068:
+    push mem+453
+addr_2069:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2070
+    jmp addr_1160
+addr_2070:
+    mov qword rax, 0
+    push rax
+addr_2071:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_2072:
+addr_2073:
+    ; - proc install 0 0
+addr_2074:
+    mov qword rax, 2
+    push rax
+addr_2075:
+    mov rax, [args_ptr]
+    mov rax, [rax]
+    push rax
+addr_2076:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_2077:
+    pop rbx
+    test rbx, rbx
+    jz addr_2079
+addr_2078:
+addr_2078_0:
+    mov qword rax, 3
+    push rax
+addr_2078_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2078_2
+    jmp addr_1360
+addr_2078_2:
+addr_2079:
+    push mem+837
+addr_2080:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2081
+    jmp addr_148
+addr_2081:
+    push str_111
+addr_2082:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2083
+    jmp addr_1203
+addr_2083:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2084
+    jmp addr_103
+addr_2084:
+    pop rax
+addr_2085:
+    push str_112
+addr_2086:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2087
+    jmp addr_169
+addr_2087:
+    pop rax
+addr_2088:
+    push mem+1349
+addr_2089:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2090
+    jmp addr_148
+addr_2090:
+    push str_113
+addr_2091:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2092
+    jmp addr_1203
+addr_2092:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2093
+    jmp addr_103
+addr_2093:
+    pop rax
+addr_2094:
+    push str_114
+addr_2095:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2096
+    jmp addr_169
+addr_2096:
+    pop rax
+addr_2097:
+    push mem+1605
+addr_2098:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2099
+    jmp addr_148
+addr_2099:
+    push str_115
+addr_2100:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2101
+    jmp addr_1203
+addr_2101:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2102
+    jmp addr_103
+addr_2102:
+    pop rax
+addr_2103:
+    push str_116
+addr_2104:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2105
+    jmp addr_169
+addr_2105:
+    pop rax
+addr_2106:
+    push mem+453
+addr_2107:
+    push str_117
+addr_2108:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2109:
+    mov qword rax, 8
+    push rax
+addr_2110:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2111:
+    push str_118
+addr_2112:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2113:
+    mov qword rax, 8
+    push rax
+addr_2114:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2115:
+    push mem+837
+addr_2116:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2117:
+    mov qword rax, 8
+    push rax
+addr_2118:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2119:
+    push mem+1605
+addr_2120:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2121:
+    mov qword rax, 8
+    push rax
+addr_2122:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2123:
+    push mem+1349
+addr_2124:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2125:
+    mov qword rax, 8
+    push rax
+addr_2126:
+    pop rax
+    pop rbx
+    add rax, rbx
+    push rax
+addr_2127:
+    mov qword rax, 0
+    push rax
+addr_2128:
+    pop rbx
+    pop rax
+    mov qword [rax], rbx
+    push rax
+addr_2129:
+    pop rax
+addr_2130:
+    push mem+581
+addr_2131:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2132
+    jmp addr_148
+addr_2132:
+    push mem+837
+addr_2133:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2134
+    jmp addr_103
+addr_2134:
+    pop rax
+addr_2135:
+    mov qword rax, 2
+    push rax
+addr_2136:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2137
+    jmp addr_1187
+addr_2137:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2138
+    jmp addr_169
+addr_2138:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2139
+    jmp addr_1085
+addr_2139:
+    pop rax
+    push rax
+    push rax
+addr_2140:
+    pop rbx
+    test rbx, rbx
+    jz addr_2142
+addr_2141:
+addr_2141_0:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2141_1
+    jmp addr_1464
+addr_2141_1:
+addr_2142:
+    pop rax
+    xor rax, 1
+    push rax
+addr_2143:
+    pop rbx
+    test rbx, rbx
+    jz addr_2145
+addr_2144:
+addr_2144_0:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2144_1
+    jmp addr_1419
+addr_2144_1:
+addr_2145:
+    push mem+581
+addr_2146:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2147
+    jmp addr_148
+addr_2147:
+    push mem+837
+addr_2148:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2149
+    jmp addr_103
+addr_2149:
+    pop rax
+addr_2150:
+    mov qword rax, 2
+    push rax
+addr_2151:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2152
+    jmp addr_1187
+addr_2152:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2153
+    jmp addr_169
+addr_2153:
+    push str_119
+addr_2154:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2155
+    jmp addr_169
+addr_2155:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2156
+    jmp addr_1085
+addr_2156:
+    pop rax
+    xor rax, 1
+    push rax
+addr_2157:
+    pop rbx
+    test rbx, rbx
+    jz addr_2159
+addr_2158:
+addr_2158_0:
+    push str_120
+addr_2158_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2158_2
+    jmp addr_50
+addr_2158_2:
+    push mem+581
+addr_2158_3:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2158_4
+    jmp addr_50
+addr_2158_4:
+    mov qword rax, 255
+    push rax
+addr_2158_5:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_2158_6:
+addr_2159:
+    push mem+581
+addr_2160:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2161
+    jmp addr_1400
+addr_2161:
+    mov qword rax, 3
+    push rax
+addr_2162:
+    mov qword rax, 0
+    push rax
+addr_2163:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2164
+    jmp addr_954
+addr_2164:
+    push str_121
+addr_2165:
+    push str_122
+addr_2166:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2167
+    jmp addr_969
+addr_2167:
+    push mem+581
+addr_2168:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2169
+    jmp addr_986
+addr_2169:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2170
+    jmp addr_995
+addr_2170:
+    push mem+581
+addr_2171:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2172
+    jmp addr_148
+addr_2172:
+    push mem+837
+addr_2173:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2174
+    jmp addr_103
+addr_2174:
+    mov qword rax, 2
+    push rax
+addr_2175:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2176
+    jmp addr_1187
+addr_2176:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2177
+    jmp addr_169
+addr_2177:
+    pop rax
+addr_2178:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2179
+    jmp addr_1717
+addr_2179:
+    mov qword rax, 0
+    push rax
+addr_2180:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_2181:
+addr_2182:
+    ; - proc remove 0 0
+addr_2183:
+    mov qword rax, 2
+    push rax
+addr_2184:
+    mov rax, [args_ptr]
+    mov rax, [rax]
+    push rax
+addr_2185:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_2186:
+    pop rbx
+    test rbx, rbx
+    jz addr_2188
+addr_2187:
+addr_2187_0:
+    mov qword rax, 3
+    push rax
+addr_2187_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2187_2
+    jmp addr_1360
+addr_2187_2:
+addr_2188:
+    mov qword rax, 0
+    push rax
+addr_2189:
+    mov rax, 60
+    pop rdi
+    syscall
+addr_2190:
+addr_2191:
+    ; - proc main 0 0
+addr_2192:
+    mov qword rax, 1
+    push rax
+addr_2193:
+    mov rax, [args_ptr]
+    mov rax, [rax]
+    push rax
+addr_2194:
+    mov rcx, 0
+    mov rdx, 1
+    pop rax
+    pop rbx
+    cmp rax, rbx
+    cmove rcx, rdx
+    push rcx
+addr_2195:
+    pop rbx
+    test rbx, rbx
+    jz addr_2197
+addr_2196:
+addr_2196_0:
+    mov qword rax, 1
+    push rax
+addr_2196_1:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2196_2
+    jmp addr_1360
+addr_2196_2:
+addr_2197:
+    mov qword rax, 1
+    push rax
+addr_2198:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2199
+    jmp addr_1187
+addr_2199:
+    pop rax
+    push rax
+    push rax
+addr_2200:
+    push str_123
+addr_2201:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2202
+    jmp addr_55
+addr_2202:
+    pop rbx
+    test rbx, rbx
+    jz addr_2204
+addr_2203:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2204
+    jmp addr_1839
+addr_2204:
+    pop rax
+    push rax
+    push rax
+addr_2205:
+    push str_124
+addr_2206:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2207
+    jmp addr_55
+addr_2207:
+    pop rbx
+    test rbx, rbx
+    jz addr_2209
+addr_2208:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2209
+    jmp addr_2074
+addr_2209:
+    pop rax
+    push rax
+    push rax
+addr_2210:
+    push str_125
+addr_2211:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2212
+    jmp addr_55
+addr_2212:
+    pop rbx
+    test rbx, rbx
+    jz addr_2214
+addr_2213:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2214
+    jmp addr_2183
+addr_2214:
+    pop rax
+addr_2215:
+    mov qword rax, 2
+    push rax
+addr_2216:
+    mov rax, [ret_stack_rsp]
+    add rax, 8
+    mov qword [ret_stack_rsp], rax
+    mov qword [rax], addr_2217
+    jmp addr_1360
+addr_2217:
+    mov rax, [ret_stack_rsp]
+    sub rax, 8
+    mov qword [ret_stack_rsp], rax
+    add rax, 8
+    jmp qword [rax]
+addr_2218:
+addr_2219:
+    ret
+_start:
+    mov qword [args_ptr], rsp
+    mov qword [ret_stack_rsp], ret_stack
+    mov rax, [ret_stack_rsp] 
+    mov qword [rax], quit
+    jmp addr_2191
+quit:
+    mov rax, 60
+    mov rdi, 0
+    syscall
+section '.data'
+str_0: db 10, 0
+str_1: db 83, 116, 114, 105, 110, 103, 32, 105, 115, 32, 110, 111, 116, 32, 97, 32, 110, 117, 109, 98, 101, 114, 0
+str_2: db 99, 111, 117, 108, 100, 32, 110, 111, 116, 32, 97, 108, 108, 111, 99, 97, 116, 101, 32, 104, 101, 97, 112, 0
+str_3: db 72, 69, 65, 80, 32, 77, 65, 80, 0
+str_4: db 45, 45, 45, 45, 45, 45, 45, 45, 0
+str_5: db 115, 105, 122, 101, 58, 32, 32, 32, 0
+str_6: db 79, 98, 106, 101, 99, 116, 0
+str_7: db 32, 32, 97, 100, 100, 114, 58, 32, 0
+str_8: db 32, 32, 115, 105, 122, 101, 58, 32, 0
+str_9: db 117, 115, 101, 100, 58, 32, 0
+str_10: db 66, 97, 100, 32, 102, 114, 101, 101, 32, 99, 97, 108, 108, 0
+str_11: db 66, 97, 100, 32, 114, 101, 97, 108, 108, 111, 99, 32, 99, 97, 108, 108, 0
+str_12: db 27, 91, 49, 59, 51, 49, 109, 0
+str_13: db 91, 0
+str_14: db 93, 32, 0
+str_15: db 27, 91, 48, 59, 48, 109, 0
+str_16: db 27, 91, 48, 59, 51, 50, 109, 0
+str_17: db 91, 0
+str_18: db 93, 32, 0
+str_19: db 27, 91, 48, 59, 48, 109, 0
+str_20: db 27, 91, 48, 59, 51, 51, 109, 0
+str_21: db 91, 0
+str_22: db 93, 32, 0
+str_23: db 27, 91, 48, 59, 48, 109, 0
+str_24: db 91, 0
+str_25: db 93, 32, 0
+str_26: db 69, 82, 82, 79, 82, 58, 32, 99, 97, 110, 116, 32, 111, 112, 101, 110, 32, 47, 100, 101, 118, 47, 110, 117, 108, 108, 0
+str_27: db 47, 100, 101, 118, 47, 110, 117, 108, 108, 0
+str_28: db 69, 82, 82, 79, 82, 0
+str_29: db 69, 82, 82, 79, 82, 0
+str_30: db 67, 77, 68, 0
+str_31: db 82, 117, 110, 58, 32, 0
+str_32: db 32, 0
+str_33: db 67, 77, 68, 0
+str_34: db 82, 117, 110, 58, 32, 0
+str_35: db 32, 0
+str_36: db 66, 97, 100, 32, 97, 114, 103, 0
+str_37: db 69, 114, 114, 111, 114, 32, 111, 112, 101, 110, 105, 110, 103, 32, 102, 105, 108, 101, 0
+str_38: db 69, 114, 114, 111, 114, 32, 119, 114, 105, 116, 105, 110, 103, 32, 102, 105, 108, 101, 0
+str_39: db 69, 114, 114, 111, 114, 32, 114, 101, 97, 100, 105, 110, 103, 32, 102, 105, 108, 101, 0
+str_40: db 69, 114, 114, 111, 114, 32, 99, 108, 111, 115, 105, 110, 103, 32, 102, 105, 108, 101, 0
+str_41: db 48, 46, 48, 46, 48, 0
+str_42: db 115, 108, 97, 109, 32, 99, 111, 109, 112, 105, 108, 101, 114, 32, 118, 0
+str_43: db 69, 82, 82, 79, 82, 58, 32, 89, 111, 117, 32, 109, 117, 115, 116, 32, 115, 112, 101, 99, 105, 102, 121, 32, 97, 110, 32, 111, 112, 101, 114, 97, 116, 105, 111, 110, 0
+str_44: db 69, 82, 82, 79, 82, 58, 32, 73, 110, 118, 97, 108, 105, 100, 32, 111, 112, 101, 114, 97, 116, 105, 111, 110, 32, 96, 0
+str_45: db 96, 0
+str_46: db 69, 82, 82, 79, 82, 58, 32, 89, 111, 117, 32, 109, 117, 115, 116, 32, 115, 112, 101, 99, 105, 102, 121, 32, 97, 32, 112, 97, 99, 107, 97, 103, 101, 32, 110, 97, 109, 101, 0
+str_47: db 115, 112, 97, 107, 105, 103, 32, 116, 104, 101, 32, 83, 108, 97, 109, 32, 112, 97, 99, 107, 97, 103, 101, 32, 109, 97, 110, 97, 103, 101, 114, 32, 118, 0
+str_48: db 32, 117, 115, 97, 103, 101, 58, 0
+str_49: db 32, 32, 32, 32, 115, 112, 97, 107, 105, 103, 32, 105, 110, 115, 116, 97, 108, 108, 32, 91, 112, 97, 99, 107, 97, 103, 101, 110, 97, 109, 101, 93, 0
+str_50: db 32, 32, 32, 32, 115, 112, 97, 107, 105, 103, 32, 114, 101, 109, 111, 118, 101, 32, 32, 91, 112, 97, 99, 107, 97, 103, 101, 110, 97, 109, 101, 93, 0
+str_51: db 32, 32, 32, 32, 115, 112, 97, 107, 105, 103, 32, 105, 110, 105, 116, 0
+str_52: db 103, 105, 116, 64, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 58, 0
+str_53: db 47, 117, 115, 114, 47, 98, 105, 110, 47, 103, 105, 116, 0
+str_54: db 99, 108, 111, 110, 101, 0
+str_55: db 47, 117, 115, 114, 47, 98, 105, 110, 47, 103, 105, 116, 0
+str_56: db 45, 67, 0
+str_57: db 112, 117, 108, 108, 0
+str_58: db 45, 113, 0
+str_59: db 47, 0
+str_60: db 47, 0
+str_61: db 46, 115, 108, 109, 0
+str_62: db 47, 117, 115, 114, 47, 98, 105, 110, 47, 115, 108, 97, 109, 0
+str_63: db 45, 111, 0
+str_64: db 72, 79, 77, 69, 0
+str_65: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 108, 105, 98, 47, 0
+str_66: db 47, 117, 115, 114, 47, 98, 105, 110, 47, 99, 112, 0
+str_67: db 45, 114, 0
+str_68: db 72, 79, 77, 69, 0
+str_69: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 108, 105, 98, 47, 0
+str_70: db 47, 117, 115, 114, 47, 98, 105, 110, 47, 99, 112, 0
+str_71: db 115, 114, 99, 0
+str_72: db 98, 105, 110, 0
+str_73: db 108, 105, 98, 0
+str_74: db 108, 105, 98, 100, 0
+str_75: db 69, 82, 82, 0
+str_76: db 105, 110, 118, 97, 108, 105, 100, 32, 99, 111, 109, 109, 97, 110, 100, 58, 32, 96, 0
+str_77: db 96, 0
+str_78: db 34, 0
+str_79: db 72, 79, 77, 69, 0
+str_80: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 99, 97, 99, 104, 101, 47, 0
+str_81: db 72, 79, 77, 69, 0
+str_82: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 108, 105, 98, 47, 0
+str_83: db 72, 79, 77, 69, 0
+str_84: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 98, 105, 110, 47, 0
+str_85: db 47, 117, 115, 114, 47, 98, 105, 110, 47, 109, 107, 100, 105, 114, 0
+str_86: db 45, 112, 0
+str_87: db 72, 79, 77, 69, 0
+str_88: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 99, 97, 99, 104, 101, 47, 0
+str_89: db 115, 108, 97, 109, 0
+str_90: db 47, 117, 115, 114, 47, 98, 105, 110, 47, 103, 105, 116, 0
+str_91: db 99, 108, 111, 110, 101, 0
+str_92: db 103, 105, 116, 64, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 58, 115, 108, 97, 109, 45, 108, 97, 110, 103, 47, 115, 108, 97, 109, 0
+str_93: db 105, 110, 115, 116, 97, 108, 108, 0
+str_94: db 115, 108, 97, 109, 45, 108, 97, 110, 103, 47, 115, 116, 100, 108, 105, 98, 0
+str_95: db 72, 79, 77, 69, 0
+str_96: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 99, 97, 99, 104, 101, 47, 115, 108, 97, 109, 47, 111, 108, 100, 47, 115, 108, 97, 109, 46, 112, 121, 0
+str_97: db 72, 79, 77, 69, 0
+str_98: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 98, 105, 110, 47, 115, 108, 97, 109, 0
+str_99: db 72, 79, 77, 69, 0
+str_100: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 99, 97, 99, 104, 101, 47, 115, 108, 97, 109, 47, 115, 108, 97, 109, 46, 115, 108, 109, 0
+str_101: db 45, 105, 0
+str_102: db 45, 111, 0
+str_103: db 72, 79, 77, 69, 0
+str_104: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 99, 97, 99, 104, 101, 47, 115, 108, 97, 109, 0
+str_105: db 47, 117, 115, 114, 47, 98, 105, 110, 47, 114, 109, 0
+str_106: db 45, 114, 102, 0
+str_107: db 105, 110, 115, 116, 97, 108, 108, 0
+str_108: db 115, 108, 97, 109, 45, 108, 97, 110, 103, 47, 115, 112, 97, 107, 105, 103, 0
+str_109: db 105, 110, 115, 116, 97, 108, 108, 0
+str_110: db 115, 108, 97, 109, 45, 108, 97, 110, 103, 47, 115, 108, 97, 109, 0
+str_111: db 72, 79, 77, 69, 0
+str_112: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 99, 97, 99, 104, 101, 47, 0
+str_113: db 72, 79, 77, 69, 0
+str_114: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 108, 105, 98, 47, 0
+str_115: db 72, 79, 77, 69, 0
+str_116: db 47, 46, 108, 111, 99, 97, 108, 47, 115, 108, 97, 109, 47, 98, 105, 110, 47, 0
+str_117: db 47, 117, 115, 114, 47, 98, 105, 110, 47, 109, 107, 100, 105, 114, 0
+str_118: db 45, 112, 0
+str_119: db 47, 112, 97, 99, 107, 97, 103, 101, 46, 115, 112, 107, 0
+str_120: db 69, 82, 82, 79, 82, 58, 32, 78, 111, 32, 112, 97, 99, 107, 97, 103, 101, 32, 102, 105, 108, 101, 32, 105, 110, 32, 114, 101, 112, 111, 0
+str_121: db 83, 80, 75, 0
+str_122: db 73, 110, 115, 116, 97, 108, 108, 105, 110, 103, 32, 0
+str_123: db 105, 110, 105, 116, 0
+str_124: db 105, 110, 115, 116, 97, 108, 108, 0
+str_125: db 114, 101, 109, 111, 118, 101, 0
+section '.bss'
+args_ptr: rq 1
+ret_stack_rsp: rq 1
+ret_stack: rb 65536
+mem: rb 2918

@@ -83,6 +83,7 @@ proc help 1 0
   (cstr.cr)
   "    spakig install [packagename]" (cstr.println)
   "    spakig remove  [packagename]" (cstr.println)
+  "    spakig init" (cstr.println)
   (cstr.cr)
   
   1 quit
@@ -322,6 +323,98 @@ proc parsefile 0 0
   ret
 end
 
+proc init 0 0
+  cachepath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/cache/" (cstr.cat) disc
+ 
+  libpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/lib/" (cstr.cat) disc
+
+  binpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/bin/" (cstr.cat) disc
+
+  tempcommand
+  "/usr/bin/mkdir" put int.SIZE +
+  "-p" put int.SIZE +
+  cachepath put int.SIZE +
+  binpath put int.SIZE +
+  libpath put int.SIZE +
+  NULL put disc
+
+  cachepath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/cache/" (cstr.cat) disc
+  
+  temppath (cstr.clear) cachepath (cstr.copy) disc
+  "slam" (cstr.cat)
+  disc
+
+  tempcommand
+  "/usr/bin/git" put int.SIZE +
+  "clone" put int.SIZE +
+  "git@github.com:slam-lang/slam" put int.SIZE +
+  temppath put int.SIZE +
+  NULL put disc
+
+  tempcommand (os.execcmdecho)
+
+  tempcommand
+  0 (os.args) put int.SIZE +
+  "install" put int.SIZE +
+  "slam-lang/stdlib" put int.SIZE +
+  NULL put disc
+  
+  tempcommand (os.execcmdecholoud)
+
+  temppath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/cache/slam/old/slam.py" (cstr.cat) disc
+  
+  binpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/bin/slam" (cstr.cat) disc
+
+  srcpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/cache/slam/slam.slm" (cstr.cat) disc
+  
+  tempcommand
+  temppath put int.SIZE +
+  "-i" put int.SIZE +
+  libpath put int.SIZE +
+  "-o" put int.SIZE +
+  binpath put int.SIZE +
+  srcpath put int.SIZE +
+  NULL put disc
+  
+  tempcommand (os.execcmdecholoud)
+
+  srcpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/cache/slam" (cstr.cat) disc
+
+  tempcommand
+  "/usr/bin/rm" put int.SIZE +
+  "-rf" put int.SIZE +
+  srcpath put int.SIZE +
+  NULL put disc
+  
+  tempcommand (os.execcmdecholoud)
+  
+  tempcommand
+  0 (os.args) put int.SIZE +
+  "install" put int.SIZE +
+  "slam-lang/spakig" put int.SIZE +
+  NULL put disc
+  
+  tempcommand (os.execcmdecholoud)
+  
+  tempcommand
+  0 (os.args) put int.SIZE +
+  "install" put int.SIZE +
+  "slam-lang/slam" put int.SIZE +
+  NULL put disc
+  
+  tempcommand (os.execcmdecholoud)
+
+  0 quit
+end
+
 proc install 0 0
   2 argc == if [HELP_PACKAGE (help)]
   
@@ -389,6 +482,7 @@ proc main 0 0
   1 argc == if [HELP_ARGS (help)]
 
   1 (os.args)
+  copy "init" (cstr.eq) if (init)
   copy "install" (cstr.eq) if (install)
   copy "remove" (cstr.eq) if (remove)
   disc

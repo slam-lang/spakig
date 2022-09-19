@@ -107,7 +107,7 @@ end
 proc clonerepo 0 0
   tempcommand (os.execcmdecho)
 
-  tempclone (cstr.clear) "git@github.com:" (cstr.copy) disc
+  tempclone (cstr.clear) "http://github.com/" (cstr.copy) disc
   2 (os.args) (cstr.cat)
   disc
 
@@ -351,7 +351,7 @@ proc init 0 0
   tempcommand
   "/usr/bin/git" put int.SIZE +
   "clone" put int.SIZE +
-  "git@github.com:slam-lang/slam" put int.SIZE +
+  "http://github.com/slam-lang/slam" put int.SIZE +
   temppath put int.SIZE +
   NULL put disc
 

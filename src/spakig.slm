@@ -1,9 +1,17 @@
+{
+The slam package manager
+
+Started by:
+  Preston Precourt (prestosilver) 2022
+
+TODO: develop command
+}
 inc stdlib.slm
 inc stdlib/log.slm
 inc stdlib/os.slm
 
 proc version 0 1
-  "0.0.0" ret
+  "0.1.0" ret
 end
 
 enum
@@ -137,6 +145,7 @@ proc pullrepo 0 0
   "-C" put int.SIZE +
   temppath put int.SIZE +
   "pull" put int.SIZE +
+  "-f" put int.SIZE +
   "-q" put int.SIZE +
   NULL put disc
 

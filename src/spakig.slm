@@ -156,11 +156,11 @@ proc setsrc 0 0
 end
 
 proc addreq 0 0
-  binpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  temppath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
   "/.local/slam/bin/spakig" (cstr.cat) disc
 
   tempcommand
-  binpath put int.SIZE +
+  temppath put int.SIZE +
   "install" put int.SIZE +
   (popstack) put int.SIZE +
   NULL put disc

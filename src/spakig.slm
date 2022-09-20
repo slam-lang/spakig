@@ -105,8 +105,6 @@ proc openinput 1 0
 end
 
 proc clonerepo 0 0
-  tempcommand (os.execcmdecho)
-
   tempclone (cstr.clear) "http://github.com/" (cstr.copy) disc
   2 (os.args) (cstr.cat)
   disc
@@ -153,6 +151,21 @@ proc setsrc 0 0
   (popstack) (cstr.cat)
   "/" (cstr.cat)
   disc
+
+  ret
+end
+
+proc addreq 0 0
+  binpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  "/.local/slam/bin/spakig" (cstr.cat) disc
+
+  tempcommand
+  binpath put int.SIZE +
+  "install" put int.SIZE +
+  (popstack) put int.SIZE +
+  NULL put disc
+  
+  tempcommand (os.execcmdecholoud)
 
   ret
 end
@@ -234,6 +247,7 @@ proc parsecmd 0 0
   ]
   cmdbuffer
   copy "src"  (cstr.eq) if [ (setsrc)  disc ret]
+  copy "req"  (cstr.eq) if [ (addreq)  disc ret]
   copy "bin"  (cstr.eq) if [ (addbin)  disc ret]
   copy "lib"  (cstr.eq) if [ (addlib)  disc ret]
   copy "libd" (cstr.eq) if [ (addlibd) disc ret] 

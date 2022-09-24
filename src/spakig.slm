@@ -388,6 +388,14 @@ proc init 0 0
   
   tempcommand (os.execcmdecholoud)
 
+  tempcommand
+  0 (os.args) put int.SIZE +
+  "install" put int.SIZE +
+  "slam-lang/math" put int.SIZE +
+  NULL put disc
+  
+  tempcommand (os.execcmdecholoud)
+
   temppath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
   "/.local/slam/cache/slam/old/slam.py" (cstr.cat) disc
   

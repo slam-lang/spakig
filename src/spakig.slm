@@ -363,6 +363,8 @@ proc init 0 0
   binpath put int.SIZE +
   libpath put int.SIZE +
   NULL put disc
+  
+  tempcommand (os.execcmdecho)
 
   cachepath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
   "/.local/slam/cache/" (cstr.cat) disc

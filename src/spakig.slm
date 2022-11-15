@@ -46,7 +46,7 @@ proc inner 1 1
 end
 
 proc pushstack 1 0
-  (inner) copy (cstr.len) 1 + (heap.zalloc) swap (cstr.copy) (cstr.len) covr + 1 + 0 putc disc
+  (inner) copy (cstr.len) 1 + (heap.zalloc) swap (cstr.cpy) (cstr.len) covr + 1 + 0 putc disc
   stack read
   stacktop read +
   copy read 0 != if [
@@ -113,11 +113,11 @@ proc openinput 1 0
 end
 
 proc clonerepo 0 0
-  tempclone (cstr.clear) "http://github.com/" (cstr.copy) disc
+  tempclone (cstr.clear) "http://github.com/" (cstr.cpy) disc
   2 (os.args) (cstr.cat)
   disc
 
-  temppath (cstr.clear) cachepath (cstr.copy) disc
+  temppath (cstr.clear) cachepath (cstr.cpy) disc
   2 (os.args) (cstr.cat)
   disc
 
@@ -136,7 +136,7 @@ end
 proc pullrepo 0 0
   tempcommand (os.execcmdecho)
 
-  temppath (cstr.clear) cachepath (cstr.copy) disc
+  temppath (cstr.clear) cachepath (cstr.cpy) disc
   2 (os.args) (cstr.cat)
   disc
 
@@ -155,7 +155,7 @@ proc pullrepo 0 0
 end
 
 proc setsrc 0 0
-  srcpath (cstr.clear) cachepath (cstr.copy) disc
+  srcpath (cstr.clear) cachepath (cstr.cpy) disc
   "/" (cstr.cat)
   (popstack) (cstr.cat)
   "/" (cstr.cat)
@@ -165,7 +165,7 @@ proc setsrc 0 0
 end
 
 proc addreq 0 0
-  temppath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  temppath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/bin/spakig" (cstr.cat) disc
 
   tempcommand
@@ -182,12 +182,12 @@ end
 proc addbin 0 0
   (popstack)
 
-  temppath (cstr.clear) srcpath (cstr.copy) disc
+  temppath (cstr.clear) srcpath (cstr.cpy) disc
   covr (cstr.cat)
   ".slm" (cstr.cat)
   disc
 
-  libpath (cstr.clear) binpath (cstr.copy) disc
+  libpath (cstr.clear) binpath (cstr.cpy) disc
   swap (cstr.cat)
   disc
   
@@ -205,11 +205,11 @@ proc addbin 0 0
 end
 
 proc addlibd 0 0
-  libpath (cstr.clear) srcpath (cstr.copy) disc
+  libpath (cstr.clear) srcpath (cstr.cpy) disc
   (popstack) (cstr.cat)
   disc
 
-  temppath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  temppath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/lib/" (cstr.cat)
   disc
 
@@ -226,11 +226,11 @@ proc addlibd 0 0
 end
 
 proc addlib 0 0
-  libpath (cstr.clear) srcpath (cstr.copy) disc
+  libpath (cstr.clear) srcpath (cstr.cpy) disc
   (popstack) (cstr.cat)
   disc
 
-  temppath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  temppath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/lib/" (cstr.cat)
   disc
 
@@ -294,7 +294,7 @@ proc parsefile 0 0
   inputfd read 0 == if ret
   READSIZE READSIZE (heap.zalloc)
   readbuffer swap put read
-  inputfd read (os.read) disc
+  inputfd read (os.readf) disc
   inputfd read 74 sys1 disc
   do
     readbuffer read
@@ -330,11 +330,11 @@ proc parsefile 0 0
 
     readbuffer read (cstr.clear)
 
-    cmdbuffer (cstr.copy) disc disc
+    cmdbuffer (cstr.cpy) disc disc
 
     READSIZE cmdbuffer (cstr.len) -
     readbuffer read cmdbuffer (cstr.len) +
-    inputfd read (os.read) copy
+    inputfd read (os.readf) copy
     readbuffer read + cmdbuffer (cstr.len) + 1 + copy readc 0 != if (cstr.clear) disc
 
     cmdbuffer READSIZE (mem.zero)
@@ -347,13 +347,13 @@ proc parsefile 0 0
 end
 
 proc init 0 0
-  cachepath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  cachepath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/cache/" (cstr.cat) disc
  
-  libpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  libpath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/lib/" (cstr.cat) disc
 
-  binpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  binpath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/bin/" (cstr.cat) disc
 
   tempcommand
@@ -366,10 +366,10 @@ proc init 0 0
   
   tempcommand (os.execcmdecho)
 
-  cachepath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  cachepath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/cache/" (cstr.cat) disc
   
-  temppath (cstr.clear) cachepath (cstr.copy) disc
+  temppath (cstr.clear) cachepath (cstr.cpy) disc
   "slam" (cstr.cat)
   disc
 
@@ -385,7 +385,7 @@ proc init 0 0
   tempcommand
   0 (os.args) put int.SIZE +
   "install" put int.SIZE +
-  "slam-lang/stdlib" put int.SIZE +
+  "slam-lang/slam-stdlib" put int.SIZE +
   NULL put disc
   
   tempcommand (os.execcmdecholoud)
@@ -398,13 +398,13 @@ proc init 0 0
   
   tempcommand (os.execcmdecholoud)
 
-  temppath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  temppath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/cache/slam/old/slam.py" (cstr.cat) disc
   
-  binpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  binpath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/bin/slam" (cstr.cat) disc
 
-  srcpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  srcpath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/cache/slam/slam.slm" (cstr.cat) disc
   
   tempcommand
@@ -418,7 +418,7 @@ proc init 0 0
   
   tempcommand (os.execcmdecholoud)
 
-  srcpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  srcpath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/cache/slam" (cstr.cat) disc
 
   tempcommand
@@ -451,13 +451,13 @@ end
 proc install 0 0
   2 argc == if [HELP_PACKAGE (help)]
   
-  cachepath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  cachepath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/cache/" (cstr.cat) disc
  
-  libpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  libpath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/lib/" (cstr.cat) disc
 
-  binpath (cstr.clear) "HOME" (os.env) (cstr.copy) disc
+  binpath (cstr.clear) "HOME" (os.env) (cstr.cpy) disc
   "/.local/slam/bin/" (cstr.cat) disc
 
   tempcommand
@@ -468,7 +468,7 @@ proc install 0 0
   libpath put int.SIZE +
   NULL put disc
 
-  temppath (cstr.clear) cachepath (cstr.copy) disc
+  temppath (cstr.clear) cachepath (cstr.cpy) disc
   2 (os.args) (cstr.cat)
   (os.fexists) copy
   if [
@@ -478,7 +478,7 @@ proc install 0 0
     (clonerepo)
   ]
 
-  temppath (cstr.clear) cachepath (cstr.copy) disc
+  temppath (cstr.clear) cachepath (cstr.cpy) disc
   2 (os.args) (cstr.cat)
   "/package.spk" (cstr.cat)
 
@@ -496,7 +496,7 @@ proc install 0 0
   temppath (log.cat)
   (log.log)
 
-  temppath (cstr.clear) cachepath (cstr.copy)
+  temppath (cstr.clear) cachepath (cstr.cpy)
   2 (os.args) (cstr.cat)
   disc
 
@@ -511,6 +511,15 @@ proc remove 0 0
   0 quit
 end
 
+proc develop 0 0
+  {ln -s $CWD ~/.local/slam/cache/local/}
+  2 argc != if [HELP_PACKAGE (help)]
+
+  (os.cwd) (cstr.println)
+
+  0 quit
+end
+
 proc main 0 0
   1 argc == if [HELP_ARGS (help)]
 
@@ -518,6 +527,7 @@ proc main 0 0
   copy "init" (cstr.eq) if (init)
   copy "install" (cstr.eq) if (install)
   copy "remove" (cstr.eq) if (remove)
+  copy "develop" (cstr.eq) if (develop)
   disc
 
   HELP_OPER (help)

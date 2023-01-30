@@ -189,6 +189,14 @@ end
 oper proc addbin 0 0
   popstack
 
+  tempcommand
+  "/usr/bin/rm" put int.SIZE +
+  "-rf" put int.SIZE +
+  "temp.asm" put int.SIZE +
+  NULL put disc
+
+  tempcommand os.execcmdecholoud disc
+
   temppath cstr.clear srcpath cstr.cpy disc
   covr cstr.cat
   ".slm" cstr.cat

@@ -207,7 +207,8 @@ oper proc addbin 0 0
   disc
   
   tempcommand
-  "/usr/bin/slam" put int.SIZE +
+  "HOME" os.env cstr.cpy
+  "/.local/slam/bin/slam" cstr.cat put int.SIZE +
   "-o" put int.SIZE +
   libpath put int.SIZE +
   temppath put int.SIZE +
